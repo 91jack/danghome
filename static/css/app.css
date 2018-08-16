@@ -4,12 +4,62 @@
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; vertical-align: baseline; }
 img { border: 0 none; vertical-align: top; }
 i, em { font-style: normal; }
-ol, ul { list-style: none; }
+ol, ul,li { list-style: none; }
 input, select, button, h1, h2, h3, h4, h5, h6 { font-size: 100%; font-family: inherit; }
 table { border-collapse: collapse; border-spacing: 0; }
 a { text-decoration: none; color: #666; }
 body { margin: 0 auto;/* min-width: 320px; max-width: 640px;*/ height: 100%; font-size: 1rem; font-family: PingFang-SC-Regular, -apple-system,Helvetica,sans-serif; line-height: 1.5; color: #666; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
 input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+.container {
+	padding: 1rem;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	color:#000;
+}
+
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+.clearfix:after {
+   content:""; 
+   display: block; 
+   clear:both; 
+}
+
+img {
+	width:100%;
+	height:100%;
+}
+
+/*通知公告列表*/
+.news-list {}
+.news-list-item {
+	height:7rem;
+	border-bottom: ;
+}
+.news-list-item .news-img {
+	width:6.666666rem;
+	height:5rem;
+}
+.list-item-titlea {
+	width:17.083333rem;
+	background: bisque;
+}
+.list-item-titleb {
+	width:26rem;
+	background: red;
+}
+.readed {
+	width:2.083333rem;
+	text-align: center;
+	font-size: 0.916666rem;
+	color:#FF0017;
+}
+
 
 /*-----------
  * 首页index.html
@@ -18,4 +68,35 @@ input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; 
 	width:100%;
 	height:15.416666rem;
 	background: red;	
+}
+.index-home-icon {
+	height: 10.416666rem;
+}
+.index-notice {
+	height:3.333333rem;
+}
+.index-news-list {
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*入党申请详情页 dangdetails*/
+.top-dangimg {
+	width:100%;
+	height:5rem;
+}
+.top-dangimg img {
+	width:100%;
+	height:100%;
 }

@@ -1,0 +1,3 @@
+index.html ---- 首页
+dangdetails.html ---- 入党申请点击详情页--》纲领
+notices.html ---通知公告
