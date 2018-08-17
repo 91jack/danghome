@@ -13,9 +13,16 @@ input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; 
 
 .container {
 	padding: 1rem;
+	margin: 0 auto;
+}
+
+.content {
 	font-size: 1.25rem;
 	line-height: 1.5rem;
 	color:#000;
+}
+.content-wrap {
+	margin: 1rem auto;
 }
 
 .fl {
@@ -29,35 +36,91 @@ input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; 
    display: block; 
    clear:both; 
 }
-
+.bg-edf {
+	background: #EDF1FC;
+}
+.bg-red {
+	background: #FB3648;
+	color:#fff;
+}
 img {
 	width:100%;
 	height:100%;
 }
+.footer-btn {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height:4.166666rem;
+}
+.footer-btn .dangzhibu a:first-child {
+	height:4.125rem;
+	border-top: 1px solid #D8DBE5;
+}
+
+.footer-btn .dangzhibu a {
+	display: block;
+	width:50%;
+	float: left;
+	font-size: 1.083333rem;
+	line-height: 4.166666rem;
+	text-align: center;
+	position: relative;
+}
+.footer-btn .dangzhibu a img {
+	width:1.75rem;
+	height:1.666666rem;
+	position: absolute;
+	top:1.25rem;
+	left:4.583333rem;
+}
+.footer-btn .dangzhibu a span {
+	margin-left: 2rem;
+}
 
 /*通知公告列表*/
-.news-list {}
+.news-list {
+	margin-left: 1rem;
+}
 .news-list-item {
-	height:7rem;
-	border-bottom: ;
+	height:5rem;
+	padding: 1rem 0;
+	border-bottom:1px solid #D8DBE6;
 }
 .news-list-item .news-img {
 	width:6.666666rem;
 	height:5rem;
 }
+.list-item-titlea,
+.list-item-titleb {
+	height:5rem;
+	position: relative;
+}
+
 .list-item-titlea {
-	width:17.083333rem;
-	background: bisque;
+	width:18rem;
+	margin-left: 1rem;
 }
 .list-item-titleb {
 	width:26rem;
-	background: red;
+}
+.list-item-titlea h3,
+.list-item-titleb h3{
+	font-size: 1.166666rem;
+	color:#333;
+	line-height: 1.5rem;
+}
+.list-item-titlea p,
+.list-item-titleb p{
+	position: absolute;
+	bottom: 0;
 }
 .readed {
 	width:2.083333rem;
 	text-align: center;
 	font-size: 0.916666rem;
 	color:#FF0017;
+	margin-right: 1rem;
 }
 
 
@@ -82,15 +145,66 @@ img {
 
 
 
-
-
-
-
-
-
-
-
-
+/*-----------
+ * 个人中心 personal.html
+ * */
+.top-bg {
+	width:100%;
+	height:12.5rem;
+}
+.personal-info {
+	width:28.75rem;
+	height:10.833333rem;
+	border-radius: 0.75rem;
+	background: #fff;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+	position: absolute;
+	top:6.333333rem;
+	left:1.25rem
+}
+.personal-info .avatar {
+	width:5.833333rem;
+	height:5.833333rem;
+	border-radius: 50%;
+	overflow: hidden;
+	position: absolute;
+	top:-1.708333rem;
+	left:1.708333rem;
+}
+.personal-msg {
+	width: 12.5rem;
+	padding-top: 0.5rem;
+	position: absolute;
+	left:10rem;
+}
+.personal-msg .name {
+	font-size: 1.333333rem;
+	line-height: 2rem;
+}
+.personal-msg .join-time {
+	color:#EC202A;
+	font-size: 1.083333rem;
+	line-height: 2rem;
+}
+.personal-record {
+	width:100%;
+	height:4.666666rem;
+	position: absolute;
+	bottom: 0;
+}
+.personal-record .record-list {
+	width:33.3%;
+	float: left;
+}
+.personal-record .record-list span {
+	display: block;
+	text-align: center;
+	font-size: 1.083333rem;
+	line-height: 1.5rem;
+}
+.personal-record .record-list span:last-child {
+	font-size: 1.166666rem;
+}
 /*入党申请详情页 dangdetails*/
 .top-dangimg {
 	width:100%;

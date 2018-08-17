@@ -1,3 +1,6 @@
 index.html ---- 首页
 dangdetails.html ---- 入党申请点击详情页--》纲领
 notices.html ---通知公告
+dangzuzhi.html----党组织部
+dangzuzhidetails.html----党组织部一
+dangzhibu.html----党支部一
