@@ -354,6 +354,48 @@ img {
 	color:#999;
 }
 
+/*
+ * 党员风采 dangyuanfengcai.html
+ * */
+.fengcai-list {
+	
+}
+.fengcai-list-item {
+	width:14.125rem;
+	height:15rem;
+	background: #fff;
+	float:left;
+	border-radius: 0.333333rem;
+	box-shadow:5px 0px 6px rgba(204,207,217,0.3);
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+.fengcai-list-item:nth-child(2n){
+	margin-right: 0;
+}
+.fengcai-list-item .img-box {
+	width:14.125rem;
+	height:10rem;
+}
+.fengcai-list-item h2,
+.fengcai-list-item h3 {
+	padding: 0 .5rem;
+	line-height: 2rem;
+	overflow: hidden;
+  	text-overflow:ellipsis;
+  	white-space:nowrap;
+}
+.fengcai-list-item h2 {
+	font-size: 1rem;
+	margin-top: .5rem;
+}
+.fengcai-list-item p {
+	font-size: 0.916666rem;
+	color:#999;
+}
+
+
+
 
 /*
  * 全部应用 appall.html
