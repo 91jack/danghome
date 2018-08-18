@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>思想汇报</title>
+		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
+	</head>
+
+	<body class="sixiang-page bg-edf">
+		<div class="sixiang-topbar">
+			<a href="javascript:;" class="active">思想汇报</a>
+			<a href="javascript:;">历史记录</a>
+		</div>
+		
+		<div class="tabbar-content">
+			
+			<div class="tabbar-box" style="display: block;">
+				<!--思想汇报-->
+				<div class="sixiang-huibao">
+					<div class="huibao-title">
+						<span>汇报标题：<em>*</em></span>
+						<input type="text" placeholder="请输入标题" />
+					</div>
+					<div class="huibao-content">
+						<p>汇报内容: <em>*</em></p>
+						<textarea placeholder="请输入汇报内容，1-3000字"></textarea>
+					</div>
+					
+				</div>
+				<div class="submit-btn bg-edf">
+					<a href="javascript:;" class="bg-red">确认提交</a>
+				</div>
+			</div>
+			
+			<div class="tabbar-box">
+				<!--历史记录-->
+				<div class="sixiang-list">
+					<ul>
+						<li>
+							<a href="" class="clearfix">
+								<div class="fl avatar">
+									<img src="static/images/demo/demo1.png" alt="" />
+								</div>
+								<div class="fl list-info">
+									<h3>张三【XXXXXX支部】</h3>
+									<h4>标题：张三八月思想汇报</h4>
+									<p>发布:3天前</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="" class="clearfix">
+								<div class="fl avatar">
+									<img src="static/images/demo/demo1.png" alt="" />
+								</div>
+								<div class="fl list-info">
+									<h3>张三【XXXXXX支部】</h3>
+									<h4>标题：张三八月思想汇报</h4>
+									<p>发布:3天前</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+			
+		
+		<!--<div class="footer-btn bg-red">
+			<a href="" class="huibao-btn">我要汇报</a>
+		</div>-->
+		
+		
+		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// tab切换
+			$('.sixiang-topbar a').on('click',function(){
+				$(this).addClass('active').siblings().removeClass('active');
+				var index = $(this).index();
+				console.log(index)
+				$('.tabbar-content .tabbar-box').eq(index).css('display','block').siblings().hide();
+			})
+		</script>
+	</body>
+</html>
