@@ -10,6 +10,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 a { text-decoration: none; color: #666; }
 body { margin: 0 auto;/* min-width: 320px; max-width: 640px;*/ height: 100%; font-size: 1rem; font-family: PingFang-SC-Regular, -apple-system,Helvetica,sans-serif; line-height: 1.5; color: #666; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
 input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+h1,h2,h3 {font-weight: normal;}
 
 .container {
 	padding: 1rem;
@@ -42,6 +43,9 @@ input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; 
 .bg-red {
 	background: #FB3648;
 	color:#fff;
+}
+.cff0 {
+	color: #FF0017;
 }
 img {
 	width:100%;
@@ -84,6 +88,27 @@ img {
 	color:#fff;
 	text-align: center;
 }
+
+.zhufu-btn {
+	width:9.333333rem;
+	height:2.5rem;
+	line-height: 2.5rem;
+	background: #FF0017;
+	border-radius: 1.25rem;
+	color:#fff;
+	text-align: center;
+	margin:0 auto;
+
+}
+.zhufu-btn img {
+	width:1.291666rem;
+	height:1.291666rem;
+	vertical-align: middle;
+	margin-right: .5rem;
+}
+
+
+
 /*通知公告列表*/
 .news-list {
 	margin-left: 1rem;
@@ -477,4 +502,135 @@ img {
 	top:0.5rem;
 	right:0.5rem;
 	display: none;
+}
+
+.details-title {
+	height:5.833333rem;
+	margin: 1rem;
+	border-bottom: 1px solid #D8DBE5;
+	position: relative;
+}
+.details-title h1 {
+	font-size: 1.333333rem;
+	font-weight: normal;
+}
+.details-title p {
+	width:100%;
+	font-size: 0.916666rem;
+	position: absolute;
+	bottom: 0;
+	line-height: 2rem;
+}
+.details-title p .post-time {
+	float: left;
+}
+.details-title p span {
+	display: inline-block;
+}
+.details-title  img {
+	width:0.75rem;
+	height:0.75rem;
+	vertical-align: middle;
+	margin-left: 1rem;
+}
+.details-content {
+	font-size: 1.25rem;
+	line-height: 2rem;
+}
+.footer-page {
+	border-top:1px solid #D8DBE5;
+	font-size: 1.083333rem;
+	margin: 1rem;
+	padding-top:.5rem;
+}
+.footer-page p {
+	line-height: 2rem;
+}
+.footer-page a {
+	text-decoration: underline;
+	
+}
+
+/*党员消息 dangyuannotice.html*/
+.notice-item .post-time{
+	text-align: center;
+	font-size: 1rem;
+	color: #999;
+	line-height: 2rem;
+	margin: 30px auto;
+}
+.notice-item-wrap {
+	background: #fff;
+	padding: 1rem;
+	border-radius: 0.166666rem;
+}
+.notice-item-wrap h2 {
+	font-size: 1.25rem;
+	line-height: 2rem;
+}
+.notice-item-wrap p {
+	font-size: 0.833333rem;
+	color:#999;
+	line-height: 2rem;
+}
+.notice-xinyuan,
+.notice-content {
+	font-size: 1.083333rem;
+	line-height: 2rem;
+	color:#666;
+}
+.notice-xinyuan span {
+	display: inline-block;
+	margin-right: 2rem;
+	
+}
+
+/*党费*/
+.dangfei-list {
+	width:100%;
+}
+.dangfei-list-item {
+	height:4.833333rem;
+	padding: .5rem 1rem;
+	background: #fff;
+	position: relative;
+	border:1px solid transparent;
+	border-bottom: 1px solid #D8DBE5;
+}
+.dangfei-list-item p {
+	clear: both;
+	width:90%;
+	display: block;
+	line-height: 2rem;
+}
+.dangfei-list-item p span{
+	display: inline-block;
+}
+.dangfei-list-item p:first-child {
+	position: absolute;
+	top:0;
+}
+.dangfei-list-item p:last-child {
+	position: absolute;
+	bottom:0;
+}
+
+.dangfei-list-item.active{
+	border:1px solid #F35B68;
+	position:relative;
+}
+.dangfei-list-item.active::after {
+	content: '';
+	display: block;
+	width:1.583333rem;
+	height:1.583333rem;
+	position: absolute;
+	right:0;
+	bottom:0;
+	z-index: 999;
+	background:#ccc url(../images/icon/icon_select.png) no-repeat;
+}
+.dangfei-footer {
+	height:4.166666rem;
+	background: #fff;
 }
