@@ -10,6 +10,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 a { text-decoration: none; color: #666; }
 body { margin: 0 auto;/* min-width: 320px; max-width: 640px;*/ height: 100%; font-size: 1rem; font-family: PingFang-SC-Regular, -apple-system,Helvetica,sans-serif; line-height: 1.5; color: #666; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
 input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+h1,h2,h3 {font-weight: normal;}
 
 .container {
 	padding: 1rem;
@@ -42,6 +43,9 @@ input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; 
 .bg-red {
 	background: #FB3648;
 	color:#fff;
+}
+.cff0 {
+	color: #FF0017;
 }
 img {
 	width:100%;
@@ -77,6 +81,33 @@ img {
 .footer-btn .dangzhibu a span {
 	margin-left: 2rem;
 }
+.footer-btn .huibao-btn {
+	display: block;
+	font-size: 1.166666rem;
+	line-height: 4.166666rem;
+	color:#fff;
+	text-align: center;
+}
+
+.zhufu-btn {
+	width:9.333333rem;
+	height:2.5rem;
+	line-height: 2.5rem;
+	background: #FF0017;
+	border-radius: 1.25rem;
+	color:#fff;
+	text-align: center;
+	margin:0 auto;
+
+}
+.zhufu-btn img {
+	width:1.291666rem;
+	height:1.291666rem;
+	vertical-align: middle;
+	margin-right: .5rem;
+}
+
+
 
 /*通知公告列表*/
 .news-list {
@@ -213,4 +244,393 @@ img {
 .top-dangimg img {
 	width:100%;
 	height:100%;
+}
+
+
+/*
+ * 思想汇报 sixianghuibao.html sixianghuibaolist.html
+ * */
+.sixiang-topbar {
+	width:100%;
+	height: 3.333333rem;
+	border-bottom: 1px solid #D8DBE6;
+	background: #fff;
+}
+.tabbar-box {
+	display: none;
+}
+.sixiang-topbar a {
+	display: inline-block;	
+	text-align: center;
+	width:50%;
+	float:left;
+	line-height: 3.333333rem;
+	font-size: 1.25rem;
+	
+}
+.sixiang-topbar a.active {
+	color:#FF0017;
+	position: relative;
+}
+.sixiang-topbar a.active:after {
+	content: '';
+	width:1.166666rem;
+	height:0.25rem;
+	border-radius: 0.125rem;
+	background: #FF0017;
+	position: absolute;
+	bottom:0;
+	left:50%;
+	margin-left: -0.583333rem;
+	
+}
+.sixiang-huibao {
+	padding-left: 1rem;
+	font-size:1.166666rem;
+	background: #fff;
+}
+.sixiang-huibao em {
+	display: inline-block;
+	color:#FF0017;
+	height:5rem;
+	line-height: 5rem;
+}
+.huibao-title {
+	height:5rem;
+	line-height: 5rem;
+	border-bottom: 1px solid #D8DBE6;
+}
+.huibao-title input {
+	width:21rem;
+	height:3rem;
+	padding: 1rem;
+	border:none;
+	text-align: right;
+}
+.huibao-content {
+	
+}
+.huibao-content textarea{
+	width:27rem;
+	min-height:20rem;
+	padding: 1rem;
+	line-height: 1.5rem;
+	border: 1px solid #D8DBE6;
+}
+
+
+
+.submit-btn {
+	width: 100%;
+	height:3.75rem;
+	
+}
+.submit-btn a{
+	display: block;
+	width: 17.5rem;
+	height:3.75rem;
+	margin: 3.166666rem auto;
+	border-radius: 1.875rem;
+	font-size: 1.25rem;
+	line-height: 3.75rem;
+	text-align: center;
+}
+
+
+.sixiang-list {
+	margin-left: 1rem;
+}
+.sixiang-list li a{
+	display: block;
+	width:100%;
+	height:5.5rem;
+	padding: 0.75rem 0;
+	border-bottom: 1px solid #D8DBE6;
+}
+.sixiang-list li .avatar {
+	width:5.5rem;
+	height:5.5rem;
+	border-radius: 50%;
+	margin-right: 1.5rem;
+}
+.sixiang-list li .avatar img {
+	width:5.5rem;
+	height:5.5rem;
+	border-radius: 50%;
+}
+
+.sixiang-list li .list-info {
+	height:5.5rem;
+	position: relative;
+}
+.sixiang-list li .list-info h3 {
+	font-size: 1.166666rem;
+	color:#333;
+	
+}
+.sixiang-list li .list-info h4 {
+	font-size: 1.083333rem;
+	color:#333;
+}
+.sixiang-list li .list-info p {
+	position: absolute;
+	bottom: 0;
+	font-size: 0.916666rem;
+	color:#999;
+}
+
+/*
+ * 党员风采 dangyuanfengcai.html
+ * */
+.fengcai-list {
+	
+}
+.fengcai-list-item {
+	width:14.125rem;
+	height:15rem;
+	background: #fff;
+	float:left;
+	border-radius: 0.333333rem;
+	box-shadow:5px 0px 6px rgba(204,207,217,0.3);
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+}
+.fengcai-list-item:nth-child(2n){
+	margin-right: 0;
+}
+.fengcai-list-item .img-box {
+	width:14.125rem;
+	height:10rem;
+}
+.fengcai-list-item h2,
+.fengcai-list-item h3 {
+	padding: 0 .5rem;
+	line-height: 2rem;
+	overflow: hidden;
+  	text-overflow:ellipsis;
+  	white-space:nowrap;
+}
+.fengcai-list-item h2 {
+	font-size: 1rem;
+	margin-top: .5rem;
+}
+.fengcai-list-item p {
+	font-size: 0.916666rem;
+	color:#999;
+}
+
+
+
+
+/*
+ * 全部应用 appall.html
+ * */
+.app-page {
+	/*width:100%;
+	height:100%;*/
+	background: #EDF1FC;
+}
+.app-container {
+	padding: 0.416666rem;
+	margin: 0 auto;
+	background: #fff;
+	margin-bottom: 0.666666rem;
+}
+.app-title {
+	height:4.166666rem;
+	line-height: 4.166666rem;
+}
+.app-title h3 {
+	display: inline-block;
+	font-size: 1.25rem;
+	line-height: 4.166666rem;
+	float: left;
+}
+.app-title a {
+	color: #108EE9;
+	font-size: 1.083333rem;
+	line-height: 4.166666rem;
+	float:right;
+}
+.app-list {
+	width:100%;
+	
+}
+.app-list .app-item {
+	width:6rem;
+	height:3.316666rem;
+	padding: .8rem .5rem;
+	background: #EDF1FC;
+	position: relative;
+	float:left;
+	text-align: center;
+	margin-right: 0.791666rem;
+	margin-bottom: 0.833333rem;
+}
+.app-list .app-item a {
+	display: block;
+	width:100%;
+	height:100%;
+	position: absolute;
+	top:0;
+	left:0;
+}
+.app-list .app-item:nth-child(4n){
+	margin-right: 0;
+}
+.app-list .app-item .icon-img {
+	width:2.833333rem;
+	height:2.166666rem;
+	margin: 0 auto;
+}
+.app-list .app-item .icon {
+	width:2.833333rem;
+	height:2.166666rem;
+}
+.app-list .app-item p {
+	text-align: center;
+	font-size: 0.916666rem;
+	line-height: 1.5rem;
+	color:#1A1A1A;
+	
+}
+.app-list .app-item .icon-del,
+.app-list .app-item .icon-add  {
+	width:1.166666rem;
+	height:1.166666rem;
+	position: absolute;
+	top:0.5rem;
+	right:0.5rem;
+	display: none;
+}
+
+.details-title {
+	height:5.833333rem;
+	margin: 1rem;
+	border-bottom: 1px solid #D8DBE5;
+	position: relative;
+}
+.details-title h1 {
+	font-size: 1.333333rem;
+	font-weight: normal;
+}
+.details-title p {
+	width:100%;
+	font-size: 0.916666rem;
+	position: absolute;
+	bottom: 0;
+	line-height: 2rem;
+}
+.details-title p .post-time {
+	float: left;
+}
+.details-title p span {
+	display: inline-block;
+}
+.details-title  img {
+	width:0.75rem;
+	height:0.75rem;
+	vertical-align: middle;
+	margin-left: 1rem;
+}
+.details-content {
+	font-size: 1.25rem;
+	line-height: 2rem;
+}
+.footer-page {
+	border-top:1px solid #D8DBE5;
+	font-size: 1.083333rem;
+	margin: 1rem;
+	padding-top:.5rem;
+}
+.footer-page p {
+	line-height: 2rem;
+}
+.footer-page a {
+	text-decoration: underline;
+	
+}
+
+/*党员消息 dangyuannotice.html*/
+.notice-item .post-time{
+	text-align: center;
+	font-size: 1rem;
+	color: #999;
+	line-height: 2rem;
+	margin: 30px auto;
+}
+.notice-item-wrap {
+	background: #fff;
+	padding: 1rem;
+	border-radius: 0.166666rem;
+}
+.notice-item-wrap h2 {
+	font-size: 1.25rem;
+	line-height: 2rem;
+}
+.notice-item-wrap p {
+	font-size: 0.833333rem;
+	color:#999;
+	line-height: 2rem;
+}
+.notice-xinyuan,
+.notice-content {
+	font-size: 1.083333rem;
+	line-height: 2rem;
+	color:#666;
+}
+.notice-xinyuan span {
+	display: inline-block;
+	margin-right: 2rem;
+	
+}
+
+/*党费*/
+.dangfei-list {
+	width:100%;
+}
+.dangfei-list-item {
+	height:4.833333rem;
+	padding: .5rem 1rem;
+	background: #fff;
+	position: relative;
+	border:1px solid transparent;
+	border-bottom: 1px solid #D8DBE5;
+}
+.dangfei-list-item p {
+	clear: both;
+	width:90%;
+	display: block;
+	line-height: 2rem;
+}
+.dangfei-list-item p span{
+	display: inline-block;
+}
+.dangfei-list-item p:first-child {
+	position: absolute;
+	top:0;
+}
+.dangfei-list-item p:last-child {
+	position: absolute;
+	bottom:0;
+}
+
+.dangfei-list-item.active{
+	border:1px solid #F35B68;
+	position:relative;
+}
+.dangfei-list-item.active::after {
+	content: '';
+	display: block;
+	width:1.583333rem;
+	height:1.583333rem;
+	position: absolute;
+	right:0;
+	bottom:0;
+	z-index: 999;
+	background:#ccc url(../images/icon/icon_select.png) no-repeat;
+}
+.dangfei-footer {
+	height:4.166666rem;
+	background: #fff;
 }

@@ -1,4 +1,4 @@
-// 移动端响应式匹配
+// 移动端响应式匹配 24
 (function () {
   document.addEventListener('DOMContentLoaded', function () {
 	var deviceWidth = document.documentElement.clientWidth;

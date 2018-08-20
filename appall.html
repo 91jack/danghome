@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>全部应用</title>
+		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
+	</head>
+
+	<body class="app-page">
+		<div class="app-container clearfix">
+			<div class="app-title">
+				<h3>我的应用</h3>
+				<a href="javascript:;" class="edit">编辑</a>
+			</div>
+			<div class="app-list myapp">
+				<!--<div class="app-item">
+					<a href=""></a>
+					<div class="icon-img">
+						<img src="static/images/icon/icon_dangfei.png" class="icon" />
+					</div>
+					<p>党费缴纳</p>
+					
+					<img src="static/images/icon/icon_del.png" alt="" class="icon-del" data-appid="1"/>
+				</div>-->
+				
+			</div>
+		</div>
+		
+		<div class="app-container clearfix">
+			<div class="app-title">
+				<h3>其他应用</h3>
+				
+			</div>
+			<div class="app-list otherapp">
+				<!--<div class="app-item">
+					<a href=""></a>
+					<div class="icon-img">
+						<img src="static/images/icon/icon_dangfei.png" class="icon" />
+					</div>
+					<p>党员转接</p>
+					<img src="static/images/icon/icon_add.png" alt="" class="icon-add" />
+				</div>-->
+			
+			</div>
+		</div>
+		
+		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 后台数据对接ajax
+			// 我的应用
+			var myapp = [
+				{id:1,icon:'static/images/icon/icon_dangfei.png',url:'http://www.baidu.com',text:'党费缴纳'},
+				{id:2,icon:'static/images/icon/icon_yaowen.png',url:'',text:'党建要闻'},
+				{id:3,icon:'static/images/icon/icon_tongzhi.png',url:'',text:'通知公告'},
+				{id:4,icon:'static/images/icon/icon_zuzhibu.png',url:'',text:'党组织部'},
+				{id:5,icon:'static/images/icon/icon_xuexi.png',url:'',text:'党员学习'},
+				{id:6,icon:'static/images/icon/icon_fengcai.png',url:'',text:'党员风采'},
+				{id:7,icon:'static/images/icon/icon_jifen.png',url:'',text:'我的积分'},
+				{id:8,icon:'static/images/icon/icon_shenqing.png',url:'',text:'入党申请'},
+				{id:9,icon:'static/images/icon/icon_fagui.png',url:'',text:'政策法规'}
+			]
+			var myappStr = ''
+			for(var i=0;i<myapp.length;i++){	
+				myappStr += '<div class="app-item" data-appid='+myapp[i].id+'>'
+						 + '<a href="'+ myapp[i].url+'"></a>'
+						+'<div class="icon-img">'
+						+'<img src="'+ myapp[i].icon+'" class="icon" /></div>'
+							+'<p>'+myapp[i].text+'</p>'
+							+'<img src="static/images/icon/icon_del.png" alt="" class="icon-del" /></div>'
+			}
+			$('.myapp').append(myappStr);
+				
+			// 其他应用
+			var otherapp = [
+				{id:1,icon:'static/images/icon/icon_zhuanjie.png',url:'',text:'党员转接'},
+				{id:2,icon:'static/images/icon/icon_gangwei.png',url:'',text:'认领岗位'},
+				{id:3,icon:'static/images/icon/icon_huibao.png',url:'',text:'思想汇报'},
+				{id:4,icon:'static/images/icon/icon_shequ.png',url:'',text:'党员进社区'},
+				{id:5,icon:'static/images/icon/icon_pingxuan.png',url:'',text:'优秀党员评选'},
+				{id:6,icon:'static/images/icon/icon_xinyuan.png',url:'',text:'微心愿'}
+			]
+			var otherappStr = ''
+			for(var i=0;i<otherapp.length;i++){	
+				otherappStr += '<div class="app-item"  data-appid='+otherapp[i].id+'>'
+						 + '<a href="'+ otherapp[i].url+'"></a>'
+						+'<div class="icon-img">'
+						+'<img src="'+ otherapp[i].icon+'" class="icon" /></div>'
+							+'<p>'+otherapp[i].text+'</p>'
+							+'<img src="static/images/icon/icon_add.png" alt="" class="icon-add" /></div>'
+			}
+			$('.otherapp').append(otherappStr);	
+			
+			// 编辑事件
+			var on = true;
+			$('.edit').click(function(){
+				if(on){
+					$(this).text('完成');
+					$('.icon-del').css('display','block');
+					$('.icon-add').css('display','block');
+					$('.app-item a').css('display','none');
+					
+					// 删除事件
+					$('.myapp .app-item').bind('click',function(){
+						var appid = $(this).attr('data-appid');
+						console.log(appid)
+						// 后台
+					});
+					
+					// 添加事件
+					$('.otherapp .app-item').bind('click',function(){
+						var appid = $(this).attr('data-appid');
+						console.log(appid)
+						// 后台
+					});
+					
+				}else{
+					$(this).text('编辑');
+					$('.icon-del').css('display','none');
+					$('.icon-add').css('display','none');
+					$('.app-item a').css('display','block')
+					
+				}
+				on = !on;
+			})
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>
