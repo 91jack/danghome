@@ -44,6 +44,9 @@ h1,h2,h3 {font-weight: normal;}
 	background: #FB3648;
 	color:#fff;
 }
+.bg-fff {
+	background: #fff;
+}
 .cff0 {
 	color: #FF0017;
 }
@@ -107,7 +110,68 @@ img {
 	margin-right: .5rem;
 }
 
+/*顶部轮播图1*/
+.top-slider {
+	width: 100%;
+	height: 13.333333rem;
+	overflow: hidden;
+	position: relative;
+}
+.top-slider-imgbox {
+	
+	height: 13.333333rem;
+	position: relative;
+	overflow: hidden;
+}
+.top-slider-imgbox li {
+	width: 31.25rem;
+	height:13.333333rem;
+	float:left;
+	position: relative;
+}
+.top-slider-imgbox li img{
+	width: 100%;
+	height: 100%;
+}
+.top-slider-num {
+	display: block;
+	width: 3rem;
+	height: 1rem;
+	padding: .3rem;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	bottom: 0.625rem;
+	left:1rem;
+	z-index: 10;
+	text-align: center;
+	font-size: 0.833333rem;
+	line-height: 1rem;
+	color:#fff;
+	border-radius: 1rem;
 
+} 
+.top-slider-num span em{
+	margin: 0 3px;
+}
+
+.top-slider-item-text {
+	width: 100%;
+	display: block;
+	height:2.5rem;
+	line-height: 2.5rem;
+	font-size: 1.166666rem;
+	/*padding: 0 2rem;*/
+	text-indent: 2rem;
+	color: #fff;
+	position: absolute;
+	left:0;
+	bottom:0;
+	background: rgba(0,0,0,.3);
+	z-index: 10;
+}
+.top-slider-item-text span {
+	margin: 0 1rem;	
+}
 
 /*通知公告列表*/
 .news-list {
@@ -154,24 +218,301 @@ img {
 	margin-right: 1rem;
 }
 
+.footer-tabbar {
+	width:100%;
+	height:3.083333rem;
+	padding: 0.5rem 0;
+	background: #fff;
+	box-shadow:0px 0px 10px 0px rgba(0,0,0,0.2);
+	position:fixed;
+	bottom: 0;
+}
+.footer-tabbar a{
+	display: block;
+	width:33.33%;
+	float: left;
+	text-align: center;
+	font-size: 0.833333rem;
+	color:#999;
+}
+.footer-tabbar a.active {
+	color:#1A1A1A;
+}
+.footer-tabbar img{
+	width:1.583333rem;
+	height:1.5rem;
+}
+.footer-tabbar a span {
+	display: block;
+}
 
+.section-title {
+	height:3.333333rem;
+	line-height: 3.333333rem;
+	background: #fff;
+	font-size: 1.25rem;
+	font-weight: bold;
+	color: #000;
+	padding-left: 1rem;
+	border-bottom: 1px solid #D8DBE6;
+}
+.section-wrap {
+	height:10.5rem;
+	background: #fff;
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+.secttion-content {
+	height:8.166666rem;
+	line-height: 2rem;
+	font-size: 1.083333rem;
+	color: #666;
+}
+.section-bottom {
+	height:3.333333rem;
+	line-height: 3.333333rem;
+	/*background: #ccc;*/
+}
+
+.section-bottom .address img {
+	width:0.916666rem;
+	height:1.333333rem;
+	display: inline-block;
+	float: left;
+	margin-top: 1rem;
+	margin-right: .5rem;
+}
+.section-bottom .address span{
+	display: inline-block;
+	height:3.333333rem;
+	line-height: 3.333333rem;
+}
+.section-bottom .tel {
+	display: inline-block;
+}
+.section-bottom .tel img {
+	width:1.25rem;
+	height:1.25rem;
+	margin-top: 1rem;
+}
 /*-----------
  * 首页index.html
  * */
 .index-slider {
 	width:100%;
-	height:15.416666rem;
+	height: 15.416666rem;
 	background: red;	
 }
 .index-home-icon {
-	height: 10.416666rem;
+	min-height: 4rem;
+	padding: 1.125rem 1rem 0.5rem 1rem;
+	overflow: hidden;
+	background: #fff;
 }
+.index-home-icon a {
+	display: block;
+	width:4.166666rem;
+	height:4.125rem;
+	float:left;
+	margin-right: 2rem;
+	margin-bottom: .5rem;
+	text-align: center;
+	font-size: 0.916666rem;
+	color:#1A1A1A;
+}
+
+.index-home-icon a:nth-child(5n){
+	margin-right: 0;
+}
+.index-home-icon a img {
+	width:2.833333rem;
+	height:2.166666rem;
+}
+.index-home-icon span {
+	display: block;
+	text-align: center;	
+	padding-top: .5rem;
+}
+
+
 .index-notice {
 	height:3.333333rem;
+	padding: 0 1rem;
+	line-height:3.333333rem;
+	background: #fff;
+	margin: 0.666666rem auto;
+	position: relative;
+	overflow: hidden;
 }
+.index-notice h2 {
+	display: inline-block;
+	color: #ED1D27;
+	float:left;
+	font-size: 1rem;
+	margin-right: 1rem;
+}
+.index-notice .tongzhi-list {
+	width:20rem;
+	/*height:3.333333rem;
+	overflow: hidden;*/
+	float:left;
+	position: absolute;
+	left:6rem;
+	/*z-index: 10;*/
+	transition: all 1s;
+}
+
+.index-notice .tongzhi-list li a{
+	display: block;
+	width:20rem;
+	line-height:3.333333rem;
+	overflow: hidden;    
+	text-overflow:ellipsis;    
+	white-space: nowrap;
+}
+
+.more {
+	display: inline-block;
+	width:4rem;
+	height:3.333333rem;
+	line-height: 3.333333rem;
+	font-size: 1rem;
+	color:#999;
+	text-align: right;
+	float: right;
+}
+.more em {
+	display: inline-block;
+	width:.5rem;
+	height:1rem;
+	background:url(../images/common/icon_more.png) no-repeat;
+	background-size:100%;
+	vertical-align: middle;
+	margin-right: .5rem;
+}
+
+
+
+
 .index-news-list {
+	margin-bottom: 5rem;
+}
+.index-news-item {
+	width:26.75rem;
+	height:10.25rem;
+	background: #fff;
+	padding: 0 1.25rem;
+	border-radius: 0.75rem;
+	margin: 0.666666rem auto;
+}
+.index-newsitem-header {
+	height:2.458333rem;
+	line-height: 2.458333rem;
+	border-bottom: 1px solid #D8DBE6;
+}
+.index-newsitem-header h2 {
+	display: inline-block;
+	float:left;
+	font-size: 1rem;
+	line-height: 1rem;
+	color:#333;
+	margin-top:0.791666rem;
+	padding-left: 0.625rem;
+	border-left:0.25rem solid #FB3648;
+}
+.index-newsitem-header .more {
+	height:2.458333rem;
+	line-height: 2.458333rem;
+}
+.index-newsitem-main{
+	height:5rem;
+	padding: 1.5rem 0;
+}
+.index-newsitem-main .text-wrap {
+	width:17rem;
+	height:5rem;
+	position: relative;
+}
+.index-newsitem-main .text-wrap h3 {
+	font-size: 1.25rem;
+	color: #000;
+}
+.index-newsitem-main .text-wrap p {
+	position: absolute;
+	bottom:0;
+	font-size: 0.916666rem;
+	color:#999;
+}
+.index-newsitem-main .img-wrap {
+	width:8.333333rem;
+	height:5rem;
+}
+
+/*-----------
+ * 联建共享 ljgongxiang.html
+ * */
+.lianjian-item {
+/*	height:34.583333rem;*/
+	background: #fff;
+	box-shadow:5px 0px 6px rgba(204,207,217,0.3);
+	margin-bottom: 1rem;
+}
+.lianjian-item-top {
+	/*height:19.041666rem;
+	overflow: hidden;*/
+	width:27.25rem;
+	margin: 0 auto;
+	padding: 1rem 0;
+	border-bottom: 1px solid #D8DBE6;
+}
+.lianjian-item-top h2 {
+	font-size: 1.166666rem;
+	color: #000;
+	line-height: 2rem;
+}
+.lianjian-item-top p {
+	font-size: 1rem;
+	color: #999;
+}
+.lianjian-item-top p span {
+	color:#000;
+}
+.lianjian-item-top img {
+	width:27.25rem;
+	height:12.5rem;
+	margin-top: 1.041666rem;
+}
+
+.lianjian-item-list .news-list-item {
+	margin-right: 1rem;
+	height:4.375rem;
+	padding: 0.666666rem 0;
+}
+.lianjian-item-list .news-list-item .list-item-titlea{
+	height:4.5rem;
+}
+.lianjian-item-list .news-list-item .news-img {
+	width:5.833333rem;
+	height:4.375rem;
+}
+.lianjian-item-bottom {
+	height:3.125rem;
 	
 }
+.lianjian-item-bottom a {
+	display: block;
+	line-height: 3.125rem;
+	text-align: center;
+}
+.lianjian-item-bottom img {
+	width:0.916666rem;
+	height:0.916666rem;
+	margin-top: 1.041666rem;
+}
+
+
+
+
 
 
 
