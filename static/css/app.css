@@ -15,6 +15,7 @@ h1,h2,h3 {font-weight: normal;}
 .container {
 	padding: 1rem;
 	margin: 0 auto;
+	margin-bottom: 4.166666rem;
 }
 
 .content {
@@ -171,6 +172,31 @@ img {
 }
 .top-slider-item-text span {
 	margin: 0 1rem;	
+}
+.go-that {
+	width:5rem;
+	height:5rem;
+	border-radius: 50%;
+	background: #FB3648;
+	position: absolute;
+	top:10.833333rem;
+	right:7.416666rem;
+	z-index: 9999;
+}
+.go-that a {
+	display: block;
+	text-align: center;
+}
+.go-that a img {
+	width:1.791666rem;
+	height: 1.625rem;
+	margin-top:1rem;
+}
+.go-that a span {
+	display: block;
+	color:#FCE21C;
+	font-size: 0.916666rem;
+	line-height: 2rem;
 }
 
 /*通知公告列表*/
@@ -577,6 +603,52 @@ img {
 .personal-record .record-list span:last-child {
 	font-size: 1.166666rem;
 }
+.personal-list {
+	width:26.25rem;
+	height:19.958333rem;
+	padding: 0 1.25rem;
+	margin:5.416666rem auto;
+	background: #fff;
+	border-radius:18px;
+	box-shadow:0px 0px 10px 0px rgba(0,0,0,0.1);
+}
+
+.personal-list li {
+	height:3.333333rem;
+	line-height: 3.333333rem;
+	clear: both;
+	/*border-bottom: 1px solid red;*/
+}
+.personal-list li .icon {
+	width:1.5rem;
+	height:1.333333rem;
+	margin-top: 0.833333rem;
+}
+.personal-list li span {
+	font-size: 1.166666rem;
+	color: #000;
+}
+.personal-list li a .num{
+	display: inline-block;
+	width:1.958333rem;
+	height:1.083333rem;
+	border-radius: 0.416666rem;
+	text-align: center;
+	background: #FF3333;
+	color:#fff;
+	font-size: 0.916666rem;
+	line-height: 1.083333rem;
+}
+.personal-list li a .icon-more {
+	display: inline-block;
+	width:0.5rem;
+	height:1rem;
+	margin-top: 1.1rem;
+}
+
+
+
+
 /*入党申请详情页 dangdetails*/
 .top-dangimg {
 	width:100%;
