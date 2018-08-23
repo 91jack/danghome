@@ -1,9 +1,108 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js">
 	<head>
-		<meta charset="UTF-8">
-		<title></title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>党费缴纳和查询</title>
+		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
 	</head>
-	<body>
+
+	<body class="bg-edf">
+		<div class="dangfei-list">
+			<div class="dangfei-list-item" data-selected="false">
+				<p>
+					<span class="fl">2018年1月党费缴纳</span>
+					<span class="fr cff0">未缴纳</span>
+				</p>
+				<p>
+					<span class="fl cff0"><em>￥</em>78</span>
+					<span class="fr">2018-07-21截至</span>
+				</p>
+			</div>
+			<div class="dangfei-list-item" data-selected="false">
+				<p>
+					<span class="fl">2018年1月党费缴纳</span>
+					<span class="fr cff0">未缴纳</span>
+				</p>
+				<p>
+					<span class="fl cff0"><em>￥</em>78</span>
+					<span class="fr">2018-07-21截至</span>
+				</p>
+			</div>
+		</div>
+		
+		<div class="dangfei-footer">
+			<div class="icon-all" data-selected="false">
+				<img src="static/images/icon/icon_all1.png" alt="" />
+				全选
+			</div>
+			<div class="pay-total">
+				总计：
+				<span class="ced1 money">￥78元</span>
+			</div>
+			<div class="pay-btn">
+				立即缴纳
+			</div>
+		</div>
+		
+		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			$('.icon-all').click(function(){
+//				$('.dangfei-list-item').attr('data-selected',)
+//			})
+
+			// 全选
+			var on2 = true;
+			$('.icon-all').on('click',function(){
+				if(on2){
+					$(this).children('img').attr('src','static/images/icon/icon_all2.png');
+					$('.dangfei-list-item').addClass('active').attr('data-selected',true);
+
+				}else {
+					$(this).children('img').attr('src','static/images/icon/icon_all1.png');
+					$('.dangfei-list-item').removeClass('active').attr('data-selected',false);
+					
+				}
+				on2 = !on2;
+			})
+			
+			// 单选
+			var selected = []
+			$('.dangfei-list-item').each(function(){
+				var on = true;
+				$(this).click(function(){
+					if(on){
+						$(this).attr('data-selected',true).addClass('active');
+						
+					}else{
+						$(this).removeClass('active').attr('data-selected',false);
+	
+					}
+					on = !on;
+					//isAllFn()
+					console.log($(this).attr('data-selected'))
+					if($(this).attr('data-selected')=='true'){
+						selected.push($(this));
+					}else{
+						selected.shift($(this));
+					};
+					console.log(selected)
+					if($('.dangfei-list-item').length == selected.length){
+						$('.icon-all').children('img').attr('src','static/images/icon/icon_all2.png');
+					}else{
+						$('.icon-all').children('img').attr('src','static/images/icon/icon_all1.png');
+						
+					}
+				})
+				
+				
+				
+				
+			})
+
+			
+		</script>
 	</body>
-</html>
+</html> 

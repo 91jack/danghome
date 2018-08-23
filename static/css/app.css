@@ -1,5 +1,4 @@
 /*通用样式*/
-
 * { -webkit-tap-highlight-color: transparent; outline: 0; margin: 0; padding: 0; vertical-align: baseline; }
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; vertical-align: baseline; }
 img { border: 0 none; vertical-align: top; }
@@ -51,6 +50,16 @@ h1,h2,h3 {font-weight: normal;}
 .cff0 {
 	color: #FF0017;
 }
+.ced1 {
+	color:#ED1D27!important;
+}
+.c23b {
+	color:#23B8FF!important;
+}
+.c000 {
+	color: #000;
+}
+
 img {
 	width:100%;
 	height:100%;
@@ -1151,31 +1160,58 @@ img {
 }
 
 .dangfei-list-item.active{
-	border:1px solid #F35B68;
 	position:relative;
+	background:#fff url(../images/icon/icon_selected.png) no-repeat;
+	background-size:100% ;
 }
-.dangfei-list-item.active::after {
-	content: '';
-	display: block;
-	width:1.583333rem;
-	height:1.583333rem;
-	position: absolute;
-	right:0;
-	bottom:0;
-	z-index: 999;
-	background:#ccc url(../images/icon/icon_select.png) no-repeat;
-}
+
 .dangfei-footer {
+	width:100%;
 	height:4.166666rem;
 	background: #fff;
+	position: fixed;
+	bottom:0;
 }
+
+.icon-all {
+	width:4.166666rem;
+	float:left;
+	text-align: center;
+	line-height:4.166666rem;
+	padding-left: 1rem;
+	
+}
+.icon-all img {
+	width:1.333333rem;
+	height: 1.333333rem;
+	margin-top: 1.2rem;
+}
+.pay-total {
+	width:12rem;
+	
+	line-height: 4.166666rem;
+	text-align: right;
+	float: left;
+}
+
+.pay-btn {
+	width:10rem;
+	line-height: 4.166666rem;
+	text-align: center;
+	background: #F35B68;
+	color: #fff;
+	font-size: 1.083333rem;
+	float:right;
+}
+
 
 /*
  入党申请 apply.html
  * */
 .apply a {
-	position: absolute;
 	display: block;
+	background: #23B8FF;
+	font-size: 0;
 }
 .apply1 {
 	width:100%;
@@ -1184,9 +1220,42 @@ img {
 	background-size: 100%;
 	position: relative;
 }
+.apply1-href0 {
+	position: absolute;
+	top:19.291666rem;
+	left:16.5rem;
+	width:9.166666rem;
+	height:2.5rem;
+
+}
 .apply1-href1 {
-	top:;
-	left:;
+	position: absolute;
+	top:24.458333rem;
+	left:23.875rem;
+	width:4.416666rem;
+	height:2.083333rem;
+}
+.apply1-href2 {
+	position: absolute;
+	top:28.75rem;
+	left:5.416666rem;
+	width:1.791666rem;
+	
+	height:2.083333rem;
+}
+.apply1-href3 {
+	position: absolute;
+	top:37.75rem;
+	left:5.25rem;
+	width:4.416666rem;
+	height:1.416666rem;
+}
+.apply1-href4 {
+	position: absolute;
+	top:45.75rem;
+	left:12.5rem;
+	width:10.666666rem;
+	height:2.333333rem;
 }
 
 .apply2 {
@@ -1196,6 +1265,7 @@ img {
 	background-size: 100%;
 	position: relative;
 }
+
 .apply3 {
 	width:100%;
 	height:50.25rem;
@@ -1203,10 +1273,228 @@ img {
 	background-size: 100%;
 	position: relative;
 }
+
 .apply4 {
 	width:100%;
 	height:68.291666rem;
 	background: url(../images/apply4.png) no-repeat;
 	background-size: 100%;
 	position: relative;
+}
+
+
+/*
+ * shequ.html
+ */
+.shequ-wrap {
+	width:27.25rem;
+	min-height: 17.166666rem;
+	overflow: hidden;
+	padding: 1rem;
+	margin: 1rem auto;
+	background: #fff;
+	box-shadow:5px 0px 6px rgba(204,207,217,0.3);
+}
+.shequ-top {
+	height:10.166666rem;
+	border-bottom: 1px solid #EDF1FC;
+}
+.shequ-top-left {
+	width:13.333333rem;
+	height:9.208333rem;
+	float:left;
+}
+.shequ-top-right{
+	width:12.75rem;
+	height:9.208333rem;
+	float:right;
+	overflow: hidden;
+}
+.shequ-top-right h2 {
+	font-size: 1.166666rem;
+	color:#000;
+	line-height: 2rem;
+}
+.shequ-top-right .shequ-content {
+	font-size: 1rem;
+	color:#999;
+}
+.shequ-top-right .shequ-content span {
+	color:#000;
+}
+
+.shequ-dangyuan {
+	width:4.166666rem;
+	height:6.958333rem;
+	float:left;
+	margin-right: 1.541666rem;
+	text-align: center;
+}
+.shequ-dangyuan:nth-child(5n){
+	margin-right: 0;
+}
+.shequ-dangyuan img {
+	width:4.166666rem;
+	height:4.166666rem;
+	margin-top: 0.583333rem;
+	margin-bottom: 0.958333rem;
+}
+.shequ-dangyuan span {
+	display: inline-block;
+	text-align: center;
+}
+
+/*
+ * 我的积分 jifen.html
+ * */
+.top-jifen {
+	width:100%;
+	height:3.5rem;
+	background: #fff;
+	position: fixed;
+	top:0;
+	padding: 2rem 0;
+}
+.record-list {
+	float:left;
+	width:33.33%;
+	text-align: center;
+	
+}
+.record-list span {
+	display: block;
+	line-height: 2rem;
+}
+.record-list span:first-child {
+	font-size: 1.083333rem;
+	color: #666;
+}
+.record-list span:last-child {
+	font-size: 1.5rem;
+	color: #333;
+}
+
+.jifen-list {
+	margin-top:7.916666rem
+}
+.jifen-list-item {
+	width:26.75rem;
+	min-height: 5.5rem;
+	overflow: hidden;
+	padding: 1rem;
+	background: #fff;
+	margin: 0.666666rem auto;
+	border-radius: 0.5rem;
+	box-shadow:1px 0px 10px rgba(204,207,217,0.3);
+	position: relative;
+}
+.jifen-list-item .type {
+	clear: both;
+}
+.jifen-list-item .type span:first-child{
+	font-size: 1.083333rem;
+	font-weight: bold;
+	color: #000;
+	display: inline-block;
+	float:left;
+}
+.jifen-list-item .type span:last-child em {
+	font-size: 1.25rem;
+}
+.jifen-list-item .type span:last-child{
+	font-size: 1rem;
+	font-weight: bold;
+	display: inline-block;
+	float:right;
+}
+
+.jifen-list-item .content {
+	clear: both;
+	color: #999;
+	overflow: hidden;
+	font-size: 1.083333rem;
+}
+.jifen-list-item .time {
+	/*height:2rem;*/
+	line-height: 2rem;
+	font-size: 0.833333rem;
+	color: #999;
+	position: absolute;
+	bottom: 0;
+}
+
+/*
+ * 优秀党员评选 choose.html
+ */
+.choose-item {
+	width:27.25rem;
+	/*height:19.666666rem;*/
+	padding:1rem;
+	margin: 1rem auto;
+	border-radius:0.5rem;
+	box-shadow:1px 0px 10px rgba(204,207,217,0.3);
+	background: #fff;
+}
+
+.choose-top {
+	
+}
+.choose-top .img-box {
+	width:6.25rem;
+	height:5.5rem;
+	float:left;
+}
+.choose-top-right h2 {
+	font-size:1.083333rem;
+	font-weight: bold;
+	color: #000;
+	margin-bottom:0.8rem;
+}
+.choose-top-right{
+	width:19.916666rem;
+	height:5.5rem;
+	float:right;
+	overflow: hidden;
+}
+.choose-content {
+	font-size: 1.083333rem;
+	color:#999;
+	margin-top: .5rem;
+}
+.choose-item-img {
+	margin: 1rem auto;
+}
+.choose-item-img img {
+	width:6.333333rem;
+	height:5.5rem;
+	float:left;
+	margin-right: 0.5rem;
+}
+.choose-item-img img:last-child {
+	margin-right: 0;
+}
+.choose-bottom a {
+	display: inline-block;
+	width:9.333333rem;
+	height:2.5rem;
+	line-height: 2.5rem;
+	text-align: center;
+	background: #FF0017;
+	color:#fff;
+	border-radius: 1.25rem;
+}
+.choose-bottom a img {
+	width:1.625rem;
+	height:1.291666rem;
+	margin-top: 0.583333rem;
+}
+.choose-bottom .voted {
+	display: inline-block;
+	float: right;
+	font-size: 1rem;
+	line-height: 2rem;
+}
+.choose-bottom .voted-btn{
+	background: #ccc;
+	display: none;
 }
