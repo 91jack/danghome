@@ -1,0 +1,231 @@
+/*
+ 入党申请 apply.html
+ * */
+.apply a {
+	display: block;
+	background: #23B8FF;
+	font-size: 0;
+}
+.apply1 {
+	width:100%;
+	height:50.25rem;
+	background: url(../images/apply1.png) no-repeat;
+	background-size: 100%;
+	position: relative;
+}
+.apply1-href0 {
+	position: absolute;
+	top:19.291666rem;
+	left:16.5rem;
+	width:9.166666rem;
+	height:2.5rem;
+
+}
+.apply1-href1 {
+	position: absolute;
+	top:24.458333rem;
+	left:23.875rem;
+	width:4.416666rem;
+	height:2.083333rem;
+}
+.apply1-href2 {
+	position: absolute;
+	top:28.75rem;
+	left:5.416666rem;
+	width:1.791666rem;
+	
+	height:2.083333rem;
+}
+.apply1-href3 {
+	position: absolute;
+	top:37.75rem;
+	left:5.25rem;
+	width:4.416666rem;
+	height:1.416666rem;
+}
+.apply1-href4 {
+	position: absolute;
+	top:45.75rem;
+	left:12.5rem;
+	width:10.666666rem;
+	height:2.333333rem;
+}
+
+.apply2 {
+	width:100%;
+	height:50.25rem;
+	background: url(../images/apply2.png) no-repeat;
+	background-size: 100%;
+	position: relative;
+}
+.apply2-href0 {
+	position: absolute;
+	top:13.125rem;
+	right:0;
+	width:8.5rem;
+	height:2.333333rem;
+}
+.apply2-href1 {
+	position: absolute;
+	left:18rem;
+	top:15.791666rem;
+	width:4.583333rem;
+	height:1.041666rem;
+}
+.apply2-href2 {
+	position: absolute;
+	top:28.083333rem;
+	left:21.708333rem;
+	width:3.125rem;
+	height:3.125rem;
+}
+.apply2-href3 {
+	position: absolute;
+	left:17.625rem;
+	top:38.125rem;
+	width:3.333333rem;
+	height:1.041666rem;
+}
+.apply2-href4 {
+	position: absolute;
+	top:46.083333rem;
+	left:9.208333rem;
+	width:2rem;
+	height:1.25rem;
+}
+
+.apply3 {
+	width:100%;
+	height:50.25rem;
+	background: url(../images/apply3.png) no-repeat;
+	background-size: 100%;
+	position: relative;
+}
+.apply3-href0 {
+	position: absolute;
+	left:23rem;
+	top: 3.375rem;
+	width:8.166666rem;
+	height:2.333333rem;
+}
+.apply3-href1 {
+	position: absolute;
+	left:5.25rem;
+	top:5.25rem;
+	width:3.125rem;
+	height:3.125rem;
+}
+.apply3-href2 {
+	position: absolute;
+	left:2.583333rem;
+	top:15.75rem;
+	width:8.041666rem;
+	height:8.166666rem;
+}
+.apply3-href3 {
+	position: absolute;
+	left:18.5rem;
+	top:24.708333rem;
+	width:5.416666rem;
+	height:5.416666rem;
+}
+.apply3-href4 {
+	position: absolute;
+	left:14.791666rem;
+	top:34.083333rem;
+	width:5.75rem;
+	height:1.458333rem;
+}
+.apply3-href5 {
+	position: absolute;
+	left:18.75rem;
+	top:40.833333rem;
+	width:4.791666rem;
+	height:1.25rem;
+}
+.apply3-href6 {
+	position: absolute;
+	left:8.833333rem;
+	top:48.75rem;
+	width:2rem;
+	height:1.25rem;
+}
+
+.apply4 {
+	width:100%;
+	height:68.291666rem;
+	background: url(../images/apply4.png) no-repeat;
+	background-size: 100%;
+	position: relative;
+}
+.apply4-href0 {
+	position: absolute;
+	left:23.083333rem;
+	top: 7.583333rem;
+	width:8.083333rem;
+	height:2.291666rem;
+}
+.apply4-href1 {
+	position: absolute;
+	left:8.75rem;
+	top: 13.25rem;
+	width:3.75rem;
+	height: 3.75rem;
+}
+.apply4-href2 {
+	position: absolute;
+	left:19.583333rem;
+	top:11.666666rem;
+	width:4.375rem;
+	height:1.25rem;
+}
+.apply4-href3 {
+	position: absolute;
+	left:11.5rem;
+	top:22.25rem;
+	width:2.166666rem;
+	height:1.25rem;
+}
+.apply4-href4 {
+	position: absolute;
+	left:15.083333rem;
+	top:22.25rem;
+	width:3.625rem;
+	height:1.25rem;
+}
+.apply4-href5 {
+	position: absolute;
+	left:20.166666rem;
+	top:29.666666rem;
+	width:2rem;
+	height:1.25rem;
+}
+.apply4-href6 {
+	position: absolute;
+	left:13.416666rem;
+	top:37.083333rem;
+	width:3rem;
+	height:1.25rem;
+}
+.apply4-href7 {
+	position: absolute;
+	left:19.75rem;
+	top:37.083333rem;
+	width:3rem;
+	height:1.25rem;
+}
+.apply4-href8 {
+	position: absolute;
+	left:23.25rem;
+	
+	top:45.166666rem;
+	width:7.916666rem;
+	height: 2.5rem;
+}
+.apply4-href9 {
+	position: absolute;
+	left:6.416666rem;
+	top:63.166666rem;
+	width:2rem;
+	height:1.25rem;
+}

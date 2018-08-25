@@ -126,6 +126,7 @@ img {
 	margin: 1rem;
 	background: #fff;
 	position: relative;
+	border-radius: 0.25rem;
 }
 .search-wrap {
 	width:90%;
@@ -1205,82 +1206,7 @@ img {
 }
 
 
-/*
- 入党申请 apply.html
- * */
-.apply a {
-	display: block;
-	background: #23B8FF;
-	font-size: 0;
-}
-.apply1 {
-	width:100%;
-	height:50.25rem;
-	background: url(../images/apply1.png) no-repeat;
-	background-size: 100%;
-	position: relative;
-}
-.apply1-href0 {
-	position: absolute;
-	top:19.291666rem;
-	left:16.5rem;
-	width:9.166666rem;
-	height:2.5rem;
 
-}
-.apply1-href1 {
-	position: absolute;
-	top:24.458333rem;
-	left:23.875rem;
-	width:4.416666rem;
-	height:2.083333rem;
-}
-.apply1-href2 {
-	position: absolute;
-	top:28.75rem;
-	left:5.416666rem;
-	width:1.791666rem;
-	
-	height:2.083333rem;
-}
-.apply1-href3 {
-	position: absolute;
-	top:37.75rem;
-	left:5.25rem;
-	width:4.416666rem;
-	height:1.416666rem;
-}
-.apply1-href4 {
-	position: absolute;
-	top:45.75rem;
-	left:12.5rem;
-	width:10.666666rem;
-	height:2.333333rem;
-}
-
-.apply2 {
-	width:100%;
-	height:50.25rem;
-	background: url(../images/apply2.png) no-repeat;
-	background-size: 100%;
-	position: relative;
-}
-
-.apply3 {
-	width:100%;
-	height:50.25rem;
-	background: url(../images/apply3.png) no-repeat;
-	background-size: 100%;
-	position: relative;
-}
-
-.apply4 {
-	width:100%;
-	height:68.291666rem;
-	background: url(../images/apply4.png) no-repeat;
-	background-size: 100%;
-	position: relative;
-}
 
 
 /*
@@ -1497,4 +1423,60 @@ img {
 .choose-bottom .voted-btn{
 	background: #ccc;
 	display: none;
+}
+
+.zuzhi-list {
+	background: #fff;
+}
+.zuzhi-list-item {
+	height:5rem;
+	padding-left: 1rem;
+	/*background: #108EE9;*/
+}
+.zuzhi-list-item .fl {
+	width:3.333333rem;
+	height: 3.333333rem;
+	margin-top: 0.833333rem;
+}
+.zuzhi-list-item .icon-zuzhi2 {
+	width:0.916666rem;
+	height:0.916666rem;
+	margin-top: 2rem;
+margin-left: 1.208333rem;
+}
+.zuzhi-list-item .fr {
+	width:25.916666rem;
+	height:5rem;
+	line-height: 5rem;
+	border-bottom:1px solid #D8DBE5 ;
+}
+.zuzhi-list-item .fr .name {
+	display: inline-block;
+	width:12.5rem;
+	line-height:3.333333rem;
+	font-size: 1.25rem;
+	color: #333;
+	
+	
+}
+.zuzhi-item .children {
+	display: none;
+}
+
+.icon-phone {
+	background: url(../images/icon/icon_phone.png);
+	margin-right: 1.583333rem;
+}
+.icon-goon {
+	background: url(../images/icon/icon_goon.png);
+	margin-right: 1rem;
+}
+.icon-phone,
+.icon-goon {
+	display: inline-block;
+	width:2.083333rem;
+	height:2.083333rem;
+	background-size: 100%;
+	margin-top:1.458333rem;
+	float:right;
 }
