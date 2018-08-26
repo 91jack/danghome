@@ -76,8 +76,8 @@
 			// 其他应用
 			var otherapp = [
 				{id:1,icon:'static/images/icon/icon_zhuanjie.png',url:'zhuanjie.html',text:'党员转接'},
-				{id:2,icon:'static/images/icon/icon_gangwei.png',url:'renling.html',text:'认领岗位'},
-				{id:3,icon:'static/images/icon/icon_huibao.png',url:'huibao.html',text:'思想汇报'},
+				{id:2,icon:'static/images/icon/icon_gangwei.png',url:'dingze.html',text:'设岗定责'},
+				{id:3,icon:'static/images/icon/icon_huibao.png',url:'huibaolist.html',text:'思想汇报'},
 				{id:4,icon:'static/images/icon/icon_shequ.png',url:'shequ.html',text:'党员进社区'},
 				{id:5,icon:'static/images/icon/icon_pingxuan.png',url:'choose.html',text:'优秀党员评选'},
 				{id:6,icon:'static/images/icon/icon_xinyuan.png',url:'xinyuan.html',text:'微心愿'}
@@ -105,6 +105,8 @@
 					// 删除事件
 					$('.myapp .app-item').bind('click',function(){
 						var appid = $(this).attr('data-appid');
+						$(this).remove()
+						$('.otherapp').append($(this))
 						console.log(appid)
 						// 后台
 					});

@@ -103,12 +103,19 @@
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+			var on = true;
 			$('.zuzhi-list-item .icon-zuzhi').click(function(){
 				var hasChildren = $(this).parent().siblings();
 				// 判断是否有子集
+				
 				if(hasChildren.length>0){
-					$(this).parent().siblings().css('display','block');
-					$(this).parent().parent().siblings().children('.children').css('display','none');
+					if(on){
+						$(this).parent().siblings().css('display','block');
+						$(this).parent().parent().siblings().children('.children').css('display','none');
+					}else{
+						$(this).parent().siblings().css('display','none');
+					}
+					on = !on;
 				}else{//没有子集  跳转页面			
 					window.location.href = 'dangzuzhi2.html'
 				}

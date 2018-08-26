@@ -28,7 +28,7 @@
 		
 		<div class="zhufu-btn">
 			<img src="static/images/icon/icon_birthday.png" alt="" />	
-			我要祝福
+			<span>我要祝福</span>
 		</div>
 		
 		<div class="footer-page">
@@ -37,9 +37,38 @@
 			
 		</div>
 		
+		<!--弹窗提示-->
+		<div class="dialog dialog-fail">
+			<img src="static/images/icon/icon_fail.png"/>
+			<span>祝福失败</span>
+		</div>
 		
+		<div class="dialog dialog-success">
+			<img src="static/images/icon/icon_success.png"/>
+			<span>祝福成功</span>
+		</div>
 		
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 点击提交按钮
+			$('.zhufu-btn').click(function(){
+				$(this).children('span').text('您已祝福');
+				$(this).css('background','#E0E0E0');
+				$(this).children('img').attr('src','static/images/icon/icon_birthday2.png')
+				
+				// 提交成功
+				$('.dialog-success').show();
+				setTimeout(function(){
+					$('.dialog-success').hide();
+				},2000)
+				
+				// 提交失败
+				//$('.dialog-fail').show();
+				//setTimeout(function(){
+				//	$('.dialog-fail').hide();
+				//},2000)
+			})
+		</script>
 	</body>
 </html>

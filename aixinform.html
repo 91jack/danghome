@@ -4,35 +4,24 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>思想汇报</title>
+		<title>我的爱心</title>
 		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
 	</head>
 
 	<body class="sixiang-page bg-edf">
-		<div class="sixiang-topbar">
-			<a href="javascript:;" class="active">思想汇报</a>
-			<a href="javascript:;">历史记录</a>
-		</div>
-		
-		<div class="tabbar-content">
-			<div class="tabbar-box" style="display: block;">
-				<!--思想汇报-->
-				<div class="sixiang-huibao">
-					<div class="huibao-title">
-						<span>汇报标题：<em>*</em></span>
-						<input type="text" placeholder="请输入标题，1-30个字" />
-					</div>
+		<div class="sixiang-huibao">
+					
 					<div class="huibao-content">
-						<p>汇报内容: <em>*</em></p>
-						<textarea placeholder="请输入汇报内容，1-3000字"></textarea>
+						<p>我的爱心: <em>*</em></p>
+						<textarea placeholder="奉献一点爱心，多一点爱心..."></textarea>
 					</div>
 					<div class="img-upload">
 						<div class="upload-imgwrap">
 							<!--<div class="img-item">
 								<img src="static/images/demo/demo1.png"/>
 								<span class="icon-del"></span>	
-							</div>-->
-							
+							</div>
+						-->
 						</div>
 						<div class="icon-imgadd" id="uploadBtn">
 							<input id="file" type="file" name="file">
@@ -46,41 +35,6 @@
 				<div class="submit-btn bg-edf">
 					<a href="javascript:;" class="bg-red">确认提交</a>
 				</div>
-			</div>
-			
-			<div class="tabbar-box">
-				<!--历史记录-->
-				<div class="sixiang-list">
-					<ul>
-						<li>
-							<a href="huibaodetails.html" class="clearfix">
-								<div class="fl avatar">
-									<img src="static/images/demo/demo1.png" alt="" />
-								</div>
-								<div class="fl list-info">
-									<h3>张三【XXXXXX支部】</h3>
-									<h4>标题：张三八月思想汇报</h4>
-									<p>发布:3天前</p>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="huibaodetails.html" class="clearfix">
-								<div class="fl avatar">
-									<img src="static/images/demo/demo1.png" alt="" />
-								</div>
-								<div class="fl list-info">
-									<h3>张三【XXXXXX支部】</h3>
-									<h4>标题：张三八月思想汇报</h4>
-									<p>发布:3天前</p>
-								</div>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		
 		
 		<!--弹窗提示-->
 		<div class="dialog dialog-fail">
@@ -96,15 +50,8 @@
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/upload.js" type="text/javascript" charset="utf-8"></script>
+		
 		<script type="text/javascript">
-			// tab切换
-			$('.sixiang-topbar a').on('click',function(){
-				$(this).addClass('active').siblings().removeClass('active');
-				var index = $(this).index();
-				console.log(index)
-				$('.tabbar-content .tabbar-box').eq(index).css('display','block').siblings().hide();
-			})
-			
 			// 点击提交按钮
 			$('.submit-btn').click(function(){
 				var imgPathArr = [];

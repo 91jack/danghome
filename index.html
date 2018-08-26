@@ -6,12 +6,21 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>党建E家</title>
 		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/swiper-4.3.3.min.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/index.css"/>
 	</head>
 
 	<body class="bg-edf">
 		<!--首页轮播-->
 		<div class="index-slider">
-			<img src="static/images/index-banner1.png"/>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="static/images/demo/banner1.png"></div>
+					<div class="swiper-slide"><img src="static/images/index-banner1.png"></div>
+					<div class="swiper-slide"><img src="static/images/demo/banner1.png"></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
 		</div>
 		
 		<!--首页icon导航-->
@@ -64,18 +73,18 @@
 			<div class="tongzhi-list">
 				<ul>
 					<li>
-						<a href="">11111开展综合能力学习周活动提高党组织学习</a>
+						<a href="details.html">11111开展综合能力学习周活动提高党组织学习</a>
 					</li>
 					<li>
-						<a href="">2222开展综合能力学习周活动提高党组织学习</a>
+						<a href="details.html">2222开展综合能力学习周活动提高党组织学习</a>
 					</li>
 					<li>
-						<a href="">333开展综合能力学习周活动提高党组织学习</a>
+						<a href="details.html">333开展综合能力学习周活动提高党组织学习</a>
 					</li>
 				</ul>
 				
 			</div>
-			<a href="" class="more"><em></em>更多</a>
+			<a href="notices.html" class="more"><em></em>更多</a>
 		</div>
 		
 		<!--首页要闻活动-->
@@ -86,7 +95,7 @@
 					<a href="yaowen.html" class="more"><em></em>更多</a>
 				</div>
 				<div class="index-newsitem-main">
-					<a href="">
+					<a href="details.html">
 						<div class="fl text-wrap">
 							<h3>坚持思想党建与制度治党同向发力</h3>
 							<p>2018-07-04 16:40</p>
@@ -101,11 +110,11 @@
 			
 			<div class="index-news-item">
 				<div class="index-newsitem-header">
-					<h2>组织活动</h2>
-					<a href="yaowen.html" class="more"><em></em>更多</a>
+					<h2>党员风采</h2>
+					<a href="fengcai.html" class="more"><em></em>更多</a>
 				</div>
 				<div class="index-newsitem-main">
-					<a href="">
+					<a href="details.html">
 						<div class="fl text-wrap">
 							<h3>坚持思想党建与制度治党同向发力</h3>
 							<p>2018-07-04 16:40</p>
@@ -137,16 +146,27 @@
 		</div>
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/swiper-4.3.3.min.js" type="text/javascript" charset="utf-8"></script>
+		
 		<script type="text/javascript">
 			// 通知上下轮播
 			var index = 0
 			var timer = setInterval(function(){
-				$('.tongzhi-list').css('transform','translateY(' + 3.333333* (-index) + 'rem)');
+				$('.tongzhi-list').css('transform','translateY(' + 3.5* (-index) + 'rem)');
 				index++;
 				if(index >= $('.tongzhi-list li').length ){
 					index = 0;
 				}
 			},3000)
+			
+			 var swiper = new Swiper('.swiper-container',{
+				autoplay:true,
+				loop: true,
+				pagination: {
+			        el: '.swiper-pagination',
+			        dynamicBullets: true,
+			      },
+			});
 		</script>
 	</body>
 </html>

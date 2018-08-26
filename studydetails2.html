@@ -29,32 +29,31 @@
 		</div>
 		
 		<div class="btn-group">
-			<a href="javascript:;" class="confirm-study-btn select">确认学习</a>
-			<a href="javascript:;" class="confirm-study-btn selected">您已学习</a>
-			<a href="studyform.html" class="summary-submit-btn">本期学习总结汇报提交</a>
+			<a href="javascript:;" class="confirm-study-btn select">确认参加</a>
+			<a href="javascript:;" class="confirm-study-btn selected">确认参加</a>
+			<a href="studyform.html" class="summary-submit-btn select">不参加原因反馈</a>
+			<a href="javascript:;" class="summary-submit-btn">理由提交，正在审核</a>
+			<a href="javascript:;" class="summary-submit-btn selected">组织同意请假</a>
 		</div>
 		
 		<!--学习总结-->
 		<div class="feedback-wrap">
 			<div class="feedback-header">
-				<h2>学习总结</h2>
-				<span>已提交：3212人</span>
+				<h2>请假理由</h2>
+				<span>请假人：3212人</span>
 			</div>
 			
 			<ul class="feedback-list">
 				<li class="feedback-list-item">
 					<p>
-						<span class="fl">汇报人：张安</span>
-						<span class="fr">汇报时间：2018-07-01</span>
+						<span class="fl">请假人：张安</span>
+						<span class="fr">请假时间：2018-07-01</span>
 					</p>
 					<p>
 						所属组织：XXXXX党支部
 					</p>
 					<div class="feedback-content">
-						汇报内容：现在网络安全与信息化建设越来越重要了，也是领
-						导们强调的思想，我们也是深度去学习。 同时今天也是个特殊
-						的日子，重温入党誓词。不管在哪里都要做个合格甚至优秀的
-						党员
+						请假理由：身体不适
 					</div>
 					<div class="feedback-imgwrap">
 						<img src="static/images/demo/demo1.png"/>
@@ -64,54 +63,33 @@
 				</li>
 				<li class="feedback-list-item">
 					<p>
-						<span class="fl">汇报人：张安</span>
-						<span class="fr">汇报时间：2018-07-01</span>
+						<span class="fl">请假人：张安</span>
+						<span class="fr">请假时间：2018-07-01</span>
 					</p>
 					<p>
 						所属组织：XXXXX党支部
 					</p>
 					<div class="feedback-content">
-						汇报内容：现在网络安全与信息化建设越来越重要了，也是领
-						导们强调的思想，我们也是深度去学习。 同时今天也是个特殊
-						的日子，重温入党誓词。不管在哪里都要做个合格甚至优秀的
-						党员
+						请假理由：身体不适
 					</div>
 					<div class="feedback-imgwrap">
 						<img src="static/images/demo/demo1.png"/>
+					
 					</div>
 				</li>
 			</ul>
 			
 		</div>
 		
-		<!--弹窗提示-->
-		<div class="dialog dialog-fail">
-			<img src="static/images/icon/icon_fail.png"/>
-			<span>学习失败</span>
-		</div>
-		
-		<div class="dialog dialog-success">
-			<img src="static/images/icon/icon_success.png"/>
-			<span>学习成功</span>
-		</div>
 		
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			// 确认学习
-			$('.select').click(function(){
-				$(this).hide().siblings().css('display','block');
-				// 学习成功
-				$('.dialog-success').show();
-				setTimeout(function(){
-					$('.dialog-success').hide();
-				},2000)
-				
-				// 学习失败
-				//$('.dialog-fail').show();
-				//setTimeout(function(){
-				//	$('.dialog-fail').hide();
-				//},2000)
+			$('.select').each(function(){
+				$(this).click(function(){
+					$(this).hide().next().css('display','block');
+				})
 			})
 		</script>
 	</body>

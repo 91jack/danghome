@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>党员学习详情</title>
+		<title>科技带头示范岗</title>
 		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
 	</head>
 
@@ -29,23 +29,55 @@
 		</div>
 		
 		<div class="btn-group">
-			<a href="javascript:;" class="confirm-study-btn select">确认学习</a>
-			<a href="javascript:;" class="confirm-study-btn selected">您已学习</a>
-			<a href="studyform.html" class="summary-submit-btn">本期学习总结汇报提交</a>
+			<a href="javascript:;" class="confirm-study-btn select">确认认领</a>
+			<a href="javascript:;" class="confirm-study-btn selected">您已认领</a>
+			<a href="huibaoform.html" class="summary-submit-btn">每月工作总结</a>
 		</div>
 		
 		<!--学习总结-->
 		<div class="feedback-wrap">
-			<div class="feedback-header">
-				<h2>学习总结</h2>
-				<span>已提交：3212人</span>
+			<div class="renling-tabbar">
+				<div class="renling-tabbar-item" style="color:#000">
+					<h2>认领人</h2>
+					<span>212人</span>
+				</div>
+				
+				<div class="renling-tabbar-item">
+					<h2>每月工作总结</h2>
+					
+				</div>
 			</div>
 			
-			<ul class="feedback-list">
+			<div class="renling-content">
+				<!--认领人-->
+				<ul class="feedback-list renling-content-item" style="display: block;">
+				<li class="feedback-list-item">
+					<p>
+						<span class="fl">认领人：张安</span>
+						<span class="fr">认领时间：2018-07-01</span> 
+					</p>
+					<p>
+						所属组织：XXXXX党支部
+					</p>
+					
+				</li>
 				<li class="feedback-list-item">
 					<p>
 						<span class="fl">汇报人：张安</span>
 						<span class="fr">汇报时间：2018-07-01</span>
+					</p>
+					<p>
+						所属组织：XXXXX党支部
+					</p>
+					
+				</li>
+			</ul>
+			<!--每月工作总结-->
+				<ul class="feedback-list renling-content-item">
+				<li class="feedback-list-item">
+					<p>
+						<span class="fl">汇报人：张安</span>
+						<span class="fr">汇报时间：2018-07-01</span> 
 					</p>
 					<p>
 						所属组织：XXXXX党支部
@@ -65,7 +97,7 @@
 				<li class="feedback-list-item">
 					<p>
 						<span class="fl">汇报人：张安</span>
-						<span class="fr">汇报时间：2018-07-01</span>
+						<span class="fr">汇报时间：2018-07-01</span> 
 					</p>
 					<p>
 						所属组织：XXXXX党支部
@@ -81,19 +113,11 @@
 					</div>
 				</li>
 			</ul>
+			</div>
+			
 			
 		</div>
 		
-		<!--弹窗提示-->
-		<div class="dialog dialog-fail">
-			<img src="static/images/icon/icon_fail.png"/>
-			<span>学习失败</span>
-		</div>
-		
-		<div class="dialog dialog-success">
-			<img src="static/images/icon/icon_success.png"/>
-			<span>学习成功</span>
-		</div>
 		
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
@@ -101,17 +125,13 @@
 			// 确认学习
 			$('.select').click(function(){
 				$(this).hide().siblings().css('display','block');
-				// 学习成功
-				$('.dialog-success').show();
-				setTimeout(function(){
-					$('.dialog-success').hide();
-				},2000)
-				
-				// 学习失败
-				//$('.dialog-fail').show();
-				//setTimeout(function(){
-				//	$('.dialog-fail').hide();
-				//},2000)
+			})
+			
+			// tabbar切换
+			$('.renling-tabbar-item').click(function(){
+				var index = $(this).index();
+				$(this).css('color','#000').siblings().css('color','#CCC');
+				$('.renling-content-item').eq(index).css('display','block').siblings().css('display','none');
 			})
 		</script>
 	</body>
