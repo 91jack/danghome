@@ -1,0 +1,217 @@
+<!doctype html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>党费缴纳和查询</title>
+		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
+	</head>
+
+	<body class="bg-edf">
+		<!--筛选条件-->
+		<div class="mask"></div>
+		<div class="filter clearfix">
+			<ul class="filter-btn">
+				<li>
+					<span>年份</span>
+					<em>
+						<img src="static/images/icon/icon_down.png"/>
+					</em>
+				</li>
+				<li>
+					<span>月份</span>
+					<em>
+						<img src="static/images/icon/icon_down.png"/>
+					</em>
+				</li>
+				<li>
+					<span>缴纳状态</span>
+					<em>
+						<img src="static/images/icon/icon_down.png"/>
+					</em>
+				</li>
+				<li>
+					<span>缴纳方式</span>
+					<em>
+						<img src="static/images/icon/icon_down.png"/>
+					</em>
+				</li>
+			</ul>
+
+			<div class="filter-condition">
+
+				<ul class="filter-condition-item">
+					<li data-value="0" data-type="年份" class="active">全部</li>
+					<li data-value="1">2018年</li>
+					<li data-value="2">2017年</li>
+					<li data-value="3">2016年</li>
+					<li data-value="4">2015年</li>
+					<li data-value="5">2014年</li>
+				</ul>
+
+				<ul class="filter-condition-item">
+					<li data-value="0" data-type="月份" class="active">全部</li>
+					<li data-value="1">1月</li>
+					<li data-value="2">2月</li>
+					<li data-value="3">3月</li>
+					<li data-value="4">4月</li>
+					<li data-value="5">5月</li>
+					<li data-value="6">6月</li>
+					<li data-value="7">7月</li>
+					<li data-value="8">8月</li>
+					<li data-value="9">9月</li>
+					<li data-value="10">10月</li>
+					<li data-value="11">11月</li>
+					<li data-value="12">12月</li>
+				</ul>
+
+				<ul class="filter-condition-item">
+					<li data-value="0" data-type="缴纳状态" class="active">全部</li>
+					<li data-value="1">已缴纳</li>
+					<li data-value="2">未缴纳</li>
+				</ul>
+
+				<ul class="filter-condition-item">
+					<li data-value="0" data-type="缴纳方式" class="active">全部</li>
+					<li data-value="1">现金</li>
+					<li data-value="2">线上</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="dangfei-list" style="margin-top:3.333333rem;">
+			<div class="dangfei-list-item" data-selected="false">
+				<p>
+					<span class="fl">2018年1月党费缴纳</span>
+					<span class="fr cff0">未缴纳</span>
+				</p>
+				<p>
+					<span class="fl cff0"><em>￥</em>78</span>
+					<span class="fr c999">2018-07-21截至</span>
+				</p>
+			</div>
+			<div class="dangfei-list-item" data-selected="false">
+				<p>
+					<span class="fl">2018年1月党费缴纳</span>
+					<span class="fr cff0">未缴纳</span>
+				</p>
+				<p>
+					<span class="fl cff0"><em>￥</em>78</span>
+					<span class="fr c999">2018-07-21截至</span>
+				</p>
+			</div>
+		</div>
+
+		<div class="dangfei-footer">
+			<div class="icon-all" data-selected="false">
+				<img src="static/images/icon/icon_all1.png" alt="" /> 全选
+			</div>
+			<div class="pay-total">
+				总计：
+				<span class="ced1 money">￥<em>78</em>元</span>
+			</div>
+			<div class="pay-btn">
+				立即缴纳
+			</div>
+		</div>
+
+		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 筛选条件
+			var index = 0;
+			$('.filter-btn li').each(function() {
+				var on = true;
+				$(this).on('click', function() {
+					var that = $(this).children('em');
+					index = $(this).index();
+					$(this).addClass('active').siblings().removeClass('active');
+					
+					that.children('img').attr('src','static/images/icon/icon_up.png');
+					that.parents().siblings().children('em').children('img').attr('src','static/images/icon/icon_down.png');
+					
+					if(on) {
+						//$(this).children().children('img').attr('src','static/images/icon/icon_up.png');
+						$('.mask').show();
+						$('.filter-condition').slideDown('fast');
+						$('.filter-condition-item').eq(index).slideDown('fast').siblings().slideUp('fast');
+					} else {
+						//$(this).children().children('img').attr('src','static/images/icon/icon_down.png');
+						$('.mask').hide();
+						$('.filter-condition').slideUp('fast');
+					}
+					on = !on;
+				});
+			})
+
+			$('.filter-condition-item li').each(function() {
+				$(this).bind('click', function() {
+					console.log($(this).attr('data-value'));
+					var selectValue = $(this).attr('data-value');
+
+					$(this).addClass('active').siblings().removeClass('active');
+					$('.filter-condition').slideUp('fast');
+					if(selectValue > 0) {
+						$('.filter-btn li').eq(index).children('span').text($(this).text())
+					} else {
+						$('.filter-btn li').eq(index).children('span').text($(this).attr('data-type'))
+					}
+					$('.mask').hide();
+				})
+			})
+
+			$('.mask').bind('click', function() {
+				$(this).hide();
+				$('.filter-condition-item').slideUp('fast');
+			})
+
+			// 全选
+			var on2 = true;
+			$('.icon-all').on('click', function() {
+				if(on2) {
+					$(this).children('img').attr('src', 'static/images/icon/icon_all2.png');
+					$('.dangfei-list-item').addClass('active').attr('data-selected', true);
+
+				} else {
+					$(this).children('img').attr('src', 'static/images/icon/icon_all1.png');
+					$('.dangfei-list-item').removeClass('active').attr('data-selected', false);
+
+				}
+				on2 = !on2;
+			})
+
+			// 单选
+			var selected = []
+			$('.dangfei-list-item').each(function() {
+				var on = true;
+				$(this).click(function() {
+					if(on) {
+						$(this).attr('data-selected', true).addClass('active');
+
+					} else {
+						$(this).removeClass('active').attr('data-selected', false);
+
+					}
+					on = !on;
+					//isAllFn()
+					console.log($(this).attr('data-selected'))
+					if($(this).attr('data-selected') == 'true') {
+						selected.push($(this));
+					} else {
+						selected.shift($(this));
+					};
+					console.log(selected)
+					if($('.dangfei-list-item').length == selected.length) {
+						$('.icon-all').children('img').attr('src', 'static/images/icon/icon_all2.png');
+					} else {
+						$('.icon-all').children('img').attr('src', 'static/images/icon/icon_all1.png');
+
+					}
+				})
+
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>微心愿</title>
+		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/xinyuan.css"/>
+	</head>
+
+	<body>
+		<div class="xinyuan">
+			
+			<div class="xinyuan-list">
+				<div class="xinyuan-item">
+					<a href="">
+						<img src="static/images/icon/xinyuan.png" alt="" />
+						<div class="xinyuan-info">
+							<div class="xinyuan-status">
+								爱心<br/>筹备中
+							</div>
+							<div class="xinyuan-intro">
+								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
+								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="xinyuan-item">
+					<a href="">
+						<img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3325825062,2185973484&fm=26&gp=0.jpg" alt="" />
+						<div class="xinyuan-info">
+							<div class="xinyuan-status">
+								爱心<br/>筹备中
+							</div>
+							<div class="xinyuan-intro">
+								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
+								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="xinyuan-item">
+					<a href="">
+						<img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3564877025,796183547&fm=26&gp=0.jpg" alt="" />
+						<div class="xinyuan-info">
+							<div class="xinyuan-status">
+								爱心<br/>筹备中
+							</div>
+							<div class="xinyuan-intro">
+								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
+								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="xinyuan-item">
+					<a href="">
+						<img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2498056520,50433925&fm=26&gp=0.jpg" alt="" />
+						<div class="xinyuan-info">
+							<div class="xinyuan-status">
+								爱心<br/>筹备中
+							</div>
+							<div class="xinyuan-intro">
+								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
+								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+			<div class="xinyuan-control">
+				<a href="javascript:;">
+					<img src="static/images/icon/xinyuan_del.png"/>
+				</a>
+				<a href="aixinform.html">
+					<img src="static/images/icon/xinyuan_heart.png" alt="" />
+				</a>
+			</div>
+		</div>
+		
+		
+		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var zindex = 100;
+			$('.xinyuan-item').each(function(){
+				var index = $(this).index();
+				zindex--;
+				var scale = [1,0.9,0.8,0.7]
+				$(this).css({'bottom':30*index + 'px'});
+				$(this).css('transform','scale('+scale[index]+')')
+				$(this).css('z-index',zindex)
+			})
+			
+		</script>
+	</body>
+</html>

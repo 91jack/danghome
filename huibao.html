@@ -15,19 +15,33 @@
 		</div>
 		
 		<div class="tabbar-content">
-			
 			<div class="tabbar-box" style="display: block;">
 				<!--思想汇报-->
 				<div class="sixiang-huibao">
 					<div class="huibao-title">
 						<span>汇报标题：<em>*</em></span>
-						<input type="text" placeholder="请输入标题" />
+						<input type="text" placeholder="请输入标题，1-30个字" />
 					</div>
 					<div class="huibao-content">
 						<p>汇报内容: <em>*</em></p>
 						<textarea placeholder="请输入汇报内容，1-3000字"></textarea>
 					</div>
-					
+					<div class="img-upload">
+						<div class="upload-imgwrap">
+							<!--<div class="img-item">
+								<img src="static/images/demo/demo1.png"/>
+								<span class="icon-del"></span>	
+							</div>-->
+							
+						</div>
+						<div class="icon-imgadd" id="uploadBtn">
+							<input id="file" type="file" name="file">
+							<img src="static/images/icon/icon_imgadd.png" alt=""  />
+							<span>添加图片……</span>
+						</div>
+						
+						
+					</div>
 				</div>
 				<div class="submit-btn bg-edf">
 					<a href="javascript:;" class="bg-red">确认提交</a>
@@ -39,7 +53,7 @@
 				<div class="sixiang-list">
 					<ul>
 						<li>
-							<a href="" class="clearfix">
+							<a href="huibaodetails.html" class="clearfix">
 								<div class="fl avatar">
 									<img src="static/images/demo/demo1.png" alt="" />
 								</div>
@@ -51,7 +65,7 @@
 							</a>
 						</li>
 						<li>
-							<a href="" class="clearfix">
+							<a href="huibaodetails.html" class="clearfix">
 								<div class="fl avatar">
 									<img src="static/images/demo/demo1.png" alt="" />
 								</div>
@@ -67,15 +81,21 @@
 			</div>
 		</div>
 		
-			
 		
-		<!--<div class="footer-btn bg-red">
-			<a href="" class="huibao-btn">我要汇报</a>
-		</div>-->
+		<!--弹窗提示-->
+		<div class="dialog dialog-fail">
+			<img src="static/images/icon/icon_fail.png"/>
+			<span>提交失败</span>
+		</div>
 		
+		<div class="dialog dialog-success">
+			<img src="static/images/icon/icon_success.png"/>
+			<span>提交成功</span>
+		</div>
 		
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/upload.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			// tab切换
 			$('.sixiang-topbar a').on('click',function(){
@@ -83,6 +103,29 @@
 				var index = $(this).index();
 				console.log(index)
 				$('.tabbar-content .tabbar-box').eq(index).css('display','block').siblings().hide();
+			})
+			
+			// 点击提交按钮
+			$('.submit-btn').click(function(){
+				var imgPathArr = [];
+				$('.img-item').each(function(){
+					// 注意 图片是base64位 后台需要转一下
+					var imgpath = $(this).children('img').attr('src');
+					console.log(imgpath)
+					imgPathArr.push(imgpath);
+				})
+				
+				// 提交成功
+				$('.dialog-success').show();
+				setTimeout(function(){
+					$('.dialog-success').hide();
+				},2000)
+				
+				// 提交失败
+				//$('.dialog-fail').show();
+				//setTimeout(function(){
+				//	$('.dialog-fail').hide();
+				//},2000)
 			})
 		</script>
 	</body>

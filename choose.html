@@ -1,0 +1,118 @@
+<!doctype html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>优秀党员评选</title>
+		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
+	</head>
+
+	<body class="bg-edf">
+		<div class="choose-item">
+			<div class="choose-top clearfix">
+				<div class="img-box">
+					<img src="static/images/demo/demo1.png"/>
+				</div>
+				
+				<div class="choose-top-right">
+					<h2>张三</h2>
+					<p>
+						<span class="c000">服务理念：</span>
+						总书记的史性变革，深刻阐述了新形想工作的历史方位和使命
+					</p>
+				</div>
+			</div>
+			<div class="choose-content clearfix">
+				<span class="c000">简介：</span>习近平总书记的重要讲话，站在新时代党和国家事业发展和历史性变革，深刻阐述了新形势下党的宣传思想工作的历史方位和使命任务，深
+			</div>
+			<div class="choose-item-img clearfix">
+				<img src="static/images/demo/demo1.png" alt="" />
+				<img src="static/images/demo/demo1.png" alt="" />
+				<img src="static/images/demo/demo1.png" alt="" />
+				<img src="static/images/demo/demo1.png" alt="" />
+			</div>
+			<div class="choose-bottom clearfix">
+				<a href="javascript:;" class="vote-btn">
+					<img src="static/images/icon/icon_vote.png" alt="" />
+					<span>我要投票</span>
+				</a>
+				
+				<a href="javascript:;" class="voted-btn">
+					<img src="static/images/icon/icon_vote2.png" alt="" />
+					<span>感谢投票</span>
+				</a>
+				<span class="cff0 voted">已投票：210</span>
+			</div>
+		</div>
+		
+		<div class="choose-item">
+			<div class="choose-top clearfix">
+				<div class="img-box">
+					<img src="static/images/demo/demo1.png"/>
+				</div>
+				
+				<div class="choose-top-right">
+					<h2>张三</h2>
+					<p>
+						<span class="c000">服务理念：</span>
+						总书记的史性变革，深刻阐述了新形想工作的历史方位和使命
+					</p>
+				</div>
+			</div>
+			<div class="choose-content clearfix">
+				<span class="c000">简介：</span>习近平总书
+			</div>
+			<div class="choose-item-img clearfix">
+				<img src="static/images/demo/demo1.png" alt="" />
+				<img src="static/images/demo/demo1.png" alt="" />
+				<img src="static/images/demo/demo1.png" alt="" />
+				<img src="static/images/demo/demo1.png" alt="" />
+			</div>
+			<div class="choose-bottom clearfix">
+				<a href="javascript:;" class="vote-btn">
+					<img src="static/images/icon/icon_vote.png" alt="" />
+					<span>我要投票</span>
+				</a>
+				
+				<a href="javascript:;" class="voted-btn">
+					<img src="static/images/icon/icon_vote2.png" alt="" />
+					<span>感谢投票</span>
+				</a>
+				<span class="cff0 voted">已投票：210</span>
+			</div>
+		</div>
+		
+		<!--弹窗提示-->
+		<div class="dialog dialog-fail">
+			<img src="static/images/icon/icon_fail.png"/>
+			<span>投票失败</span>
+		</div>
+		
+		<div class="dialog dialog-success">
+			<img src="static/images/icon/icon_success.png"/>
+			<span>投票成功</span>
+		</div>
+		
+		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// 我要投票
+			$('.vote-btn').click(function(){
+				$(this).hide().siblings().css('display','inline-block')
+			
+				// 提交成功
+				$('.dialog-success').show();
+				setTimeout(function(){
+					$('.dialog-success').hide();
+				},2000)
+				
+				// 提交失败
+				//$('.dialog-fail').show();
+				//setTimeout(function(){
+				//	$('.dialog-fail').hide();
+				//},2000)
+			})
+		</script>
+	</body>
+</html>

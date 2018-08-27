@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>党组织部一</title>
+		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
+	</head>
+
+	<body class="bg-edf">
+		<div class="top-slider">
+			<ul class="top-slider-imgbox">
+				<li>
+					<a href="javascript:;">
+						<img src="static/images/demo/banner1.png" alt="" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="static/images/demo/demo-fengcai.png" alt="" />
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<img src="static/images/index-banner1.png" alt="" />
+					</a>
+				</li>
+			</ul>
+			
+			<div class="top-slider-num">
+				<span><em class="current-num"></em>/<em class="all-num"></em></span>
+			</div>
+			
+			
+		</div>
+		<div class="go-that">
+			<a href="javascript:;">
+				<img src="static/images/icon/icon_gothat.png"/>
+				<span>去这里</span>
+			</a>
+		</div>
+		
+		<h2 class="section-title">组织简介</h2>
+		<div class="section-wrap">
+			<div class="secttion-content">
+				<a href="dangzhibu.html">
+					激情与活力也是我们总支最大的特征，党总支班子团结、廉洁
+					、务实、创新，平时注重对党员的管理、教育和培训，能严格
+					较强的凝聚力、创造力和战斗力；坚持民主集中制...
+				</a>
+				
+			</div>
+			<div class="section-bottom">
+				<div class="address fl">
+					<img src="static/images/icon/icon_address.png"/>
+					<span>重庆市金开大道101号</span>
+				</div>
+				<div class="tel fr">
+					<a href="tel:123456"><img src="static/images/icon/icon_tel2.png"/></a>
+				</div>
+			</div>
+		</div>
+		
+		
+		<h2 class="section-title">组织架构</h2>
+		<div class="zuzhi-list">
+			<div class="zuzhi-list-item">
+				<div class="fl">
+					<img src="static/images/icon/icon_zuhi.png"/>
+				</div>
+				<div class="fr">
+					<a href="dangzhibu.html" class="name">党支部一</a>
+					<a href="javascript:;" class="icon-goon"></a>
+					<a href="tel:123456" class="icon-phone"></a>
+				</div>
+			</div>
+			<div class="zuzhi-list-item">
+				<div class="fl">
+					<img src="static/images/icon/icon_zuhi.png"/>
+				</div>
+				<div class="fr">
+					<a href="dangzhibu.html" class="name">党支部一</a>
+					<a href="javascript:;" class="icon-goon"></a>
+					<a href="tel:123456" class="icon-phone"></a>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		
+		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/slider.js"></script>
+<script type="text/javascript">
+		// 轮播调用
+	$('.top-slider-imgbox').each(function(){
+		var imgbox = $(this)[0];
+		var li = $(this).children('li');
+		
+		var currentNum = $('.current-num');
+		var allNum = $('.all-num');
+		console.log(currentNum,allNum)
+		slider( imgbox, li,currentNum,allNum)
+	})
+</script>
+	</body>
+</html>
