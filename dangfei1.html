@@ -1,6 +1,5 @@
 <!doctype html>
 <html class="no-js">
-
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -81,7 +80,7 @@
 			</div>
 		</div>
 
-		<div class="dangfei-list">
+		<div class="dangfei-list" style="margin-top:3.333333rem;">
 			<div class="dangfei-list-item" data-selected="false">
 				<p>
 					<span class="fl">2018年1月党费缴纳</span>
@@ -125,15 +124,20 @@
 			$('.filter-btn li').each(function() {
 				var on = true;
 				$(this).on('click', function() {
-					var that = $(this).children('span');
+					var that = $(this).children('em');
 					index = $(this).index();
 					$(this).addClass('active').siblings().removeClass('active');
-					$(this).children().children('img').attr('src','static/images/icon/icon_up.png');
+					
+					that.children('img').attr('src','static/images/icon/icon_up.png');
+					that.parents().siblings().children('em').children('img').attr('src','static/images/icon/icon_down.png');
+					
 					if(on) {
+						//$(this).children().children('img').attr('src','static/images/icon/icon_up.png');
 						$('.mask').show();
 						$('.filter-condition').slideDown('fast');
 						$('.filter-condition-item').eq(index).slideDown('fast').siblings().slideUp('fast');
 					} else {
+						//$(this).children().children('img').attr('src','static/images/icon/icon_down.png');
 						$('.mask').hide();
 						$('.filter-condition').slideUp('fast');
 					}

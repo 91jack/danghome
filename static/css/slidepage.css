@@ -1,6 +1,6 @@
 #nav {
 				height:2.916666rem;
-				background: #007AFF;
+				/*background: #007AFF;*/
 				line-height: 2.916666rem;
 				border-bottom: 0.041666rem solid #D8DBE6;
 			}
@@ -45,3 +45,6 @@
 				color: #fff;
 				background: rgba(0, 0, 0, .3);
 			}
+			#page {
+	margin-top: 6.25rem;
+}
