@@ -81,6 +81,18 @@
 			
 		</div>
 		
+		<!--弹窗提示-->
+		<div class="dialog dialog-fail">
+			<img src="static/images/icon/icon_fail.png"/>
+			<span>学习失败</span>
+		</div>
+		
+			
+		<div class="dialog dialog-success">
+			
+				<img src="static/images/icon/icon_success.png"/>
+				<span>学习成功</span>
+		</div>
 		
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
@@ -89,6 +101,18 @@
 			$('.select').each(function(){
 				$(this).click(function(){
 					$(this).hide().next().css('display','block');
+					// 学习成功
+					$('.dialog-success').show();
+					setTimeout(function(){
+						$('.dialog-success').hide();
+					},2000)
+					
+					// 学习失败
+					//$('.dialog-fail').show();
+					//setTimeout(function(){
+					//	$('.dialog-fail').hide();
+					//},2000)
+					
 				})
 			})
 		</script>

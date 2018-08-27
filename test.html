@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.stack {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				perspective: 1000px; //子元素视距
+				perspective-origin: 50% 150%; //子元素透视位置
+				-webkit-perspective: 1000px;
+				-webkit-perspective-origin: 50% 150%;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.stack-item {
+				background: #fff;
+				height: 100%;
+				width: 100%;
+				border-radius: 4px;
+				text-align: center;
+				overflow: hidden;
+			}
+			
+			.stack-item img {
+				width: 100%;
+				display: block;
+				pointer-events: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul class="stack">
+			<li class="stack-item" style="transform: translate3d(0px, 0px, 0px);opacity: 1;z-index: 10;">
+				<img src="http://gtd.alicdn.com/tfscom/TB1HE0hXY1YBuNjSszhwu3UsFXa" alt="01">
+			</li>
+			<li class="stack-item" style="transform: translate3d(0px, 0px, -60px);opacity: 1;z-index: 1">
+				<img src="http://gtd.alicdn.com/tfscom/TB1gotjX21TBuNjy0Fjwu1jyXXa" alt="02">
+			</li>
+			<li class="stack-item" style="transform: translate3d(0px, 0px, -120px);opacity: 1;z-index: 1">
+				<img src="http://gtd.alicdn.com/tfscom/TB1r.aQKhGYBuNjy0FnSut5lpXa" alt="03">
+			</li>
+			<li class="stack-item" style="transform: translate3d(0px, 0px, -180px);opacity: 0;z-index: -1">
+				<img src="http://gtd.alicdn.com/tfscom/TB1v95pKbSYBuNjSspfSuwZCpXa" alt="04">
+			</li>
+			<li class="stack-item" style="transform: translate3d(0px, 0px, -180px);opacity: 0;z-index: -1">
+				<img src="http://gtd.alicdn.com/tfscom/TB15n55X_JYBeNjy1zeSuuhzVXa" alt="05">
+			</li>
+		</ul>
+	</body>
+
+</html>

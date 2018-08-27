@@ -33,7 +33,6 @@ var pageSwiper = new Swiper('#page', {
 			progress = this.progress
 			bar.transition(0)
 			bar.transform('translateX(' + navSum * progress + 'px)')
-
 		},
 		transitionStart: function() {
 			activeIndex = this.activeIndex
@@ -72,12 +71,15 @@ navSwiper.$el.on('touchstart', function(e) {
 	e.preventDefault() //去掉按压阴影
 })
 navSwiper.on('tap', function(e) {
-
 	clickIndex = this.clickedIndex
 	clickSlide = this.slides.eq(clickIndex)
 	pageSwiper.slideTo(clickIndex, 0);
 	this.slides.find('span').css('color', '#999');
 	clickSlide.find('span').css('color', '#FF0017');
+	 var scrollT = document.body.scrollTop|| document.documentElement.scrollTop;
+	//alert(scrollT)
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
 })
 
 //热卖		

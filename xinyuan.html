@@ -6,95 +6,376 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>微心愿</title>
 		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
-		<link rel="stylesheet" type="text/css" href="static/css/xinyuan.css"/>
+		<link rel="stylesheet" type="text/css" href="static/css/xinyuan.css" />
 	</head>
-
 	<body>
 		<div class="xinyuan">
-			
-			<div class="xinyuan-list">
-				<div class="xinyuan-item">
-					<a href="">
-						<img src="static/images/icon/xinyuan.png" alt="" />
-						<div class="xinyuan-info">
-							<div class="xinyuan-status">
-								爱心<br/>筹备中
-							</div>
-							<div class="xinyuan-intro">
-								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
-								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
-							</div>
-						</div>
+			<div class="xinyuan-container">
+				<div class="xinyuan-wrap">
+					<ul class="xinyuan-list">
+						<!--<li class="xinyuan-item">
+							<a href="xinyuandetails.html">
+								<img src="static/images/icon/xinyuan.png" alt="" />
+								<div class="xinyuan-info">
+									<div class="xinyuan-status">
+										爱心<br/>筹备中
+									</div>
+									<div class="xinyuan-intro">
+										我的心愿就是买一买大大的房子，大大的车子，大大的城堡 我的心愿就是买一买大大的房子，大大的车子，大大的城堡
+									</div>
+								</div>
+							</a>
+						</li>-->
+					</ul>
+				</div>
+				<div class="xinyuan-control">
+					<a href="javascript:;" class="del">
+						<img src="static/images/icon/xinyuan_del.png" />
+					</a>
+					<a href="aixinform.html" class="zan">
+						<img src="static/images/icon/xinyuan_heart.png" alt="" />
 					</a>
 				</div>
-				<div class="xinyuan-item">
-					<a href="">
-						<img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3325825062,2185973484&fm=26&gp=0.jpg" alt="" />
-						<div class="xinyuan-info">
-							<div class="xinyuan-status">
-								爱心<br/>筹备中
-							</div>
-							<div class="xinyuan-intro">
-								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
-								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="xinyuan-item">
-					<a href="">
-						<img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3564877025,796183547&fm=26&gp=0.jpg" alt="" />
-						<div class="xinyuan-info">
-							<div class="xinyuan-status">
-								爱心<br/>筹备中
-							</div>
-							<div class="xinyuan-intro">
-								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
-								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
-							</div>
-						</div>
-					</a>
-				</div>
-				<div class="xinyuan-item">
-					<a href="">
-						<img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2498056520,50433925&fm=26&gp=0.jpg" alt="" />
-						<div class="xinyuan-info">
-							<div class="xinyuan-status">
-								爱心<br/>筹备中
-							</div>
-							<div class="xinyuan-intro">
-								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
-								我的心愿就是买一买大大的房子，大大的车子，大大的城堡
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-			
-			<div class="xinyuan-control">
-				<a href="javascript:;">
-					<img src="static/images/icon/xinyuan_del.png"/>
-				</a>
-				<a href="aixinform.html">
-					<img src="static/images/icon/xinyuan_heart.png" alt="" />
-				</a>
 			</div>
 		</div>
-		
-		
+
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			var zindex = 100;
-			$('.xinyuan-item').each(function(){
-				var index = $(this).index();
-				zindex--;
-				var scale = [1,0.9,0.8,0.7]
-				$(this).css({'bottom':30*index + 'px'});
-				$(this).css('transform','scale('+scale[index]+')')
-				$(this).css('z-index',zindex)
-			})
+			var pages = [
+				{'id':1,'status':'爱心<br/>筹备中','imgpath':'http://img4.imgtn.bdimg.com/it/u=3093784034,1899544230&fm=26&gp=0.jpg','intro':'我有一个大大的心愿'},
+				{'id':2,'status':'心愿<br/>已了','imgpath':'https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3762095652,4288929885&fm=26&gp=0.jpg','intro':'我有一个大大的心愿，就是买套大别墅'},
+				{'id':3,'status':'爱心<br/>筹备中','imgpath':'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=534858419,2528258774&fm=200&gp=0.jpg','intro':'我有一个小小小小小的心愿'},
+				{'id':4,'status':'心愿<br/>已了','imgpath':'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3564877025,796183547&fm=26&gp=0.jpg','intro':'我的心愿就是买套大别墅'},
+			]
 			
+			var temporaryData = {
+		        prefixes: detectPrefixes(),
+		        offsetY: '',
+		        poswidth: 0,
+		        posheight: 0,
+		        lastPosWidth: '',
+		        lastPosHeight: '',
+		        lastZindex: '',
+		        rotate: 0,
+		        lastRotate: 0,
+		        visible:  3,
+		        tracking: false,
+		        animation: false,
+		        currentPage: 0,
+		        opacity: 1,
+		        lastOpacity: 0,
+		        swipe: false,
+		        zIndex: 10
+		      }
+        
+			var str = '';
+			for(var i=0;i<pages.length;i++){
+				console.log(transformIndex(i))
+				//console.log(transform(i))
+				str += '<li class="xinyuan-item" style="" touchmove="touchmove()" ontouchstart="touchstart()" ontouchend="touchend()" ontransitiend="onTransitiend('+i+')" ontouchcancel="touched()" onmousedown="touchstart()" onmouseup="touchend()" onmousemove="touchmove()" onmouseout="touchend()">'
+					+'<a href="xinyuandetails.html?id="'+pages[i].id+'>'
+					+'<img src="'+ pages[i].imgpath+'" alt="" />'
+					+'<div class="xinyuan-info">'
+					+'<div class="xinyuan-status">'
+					+pages[i].status
+					+'</div>'
+					+'<div class="xinyuan-intro">'
+					+pages[i].intro
+					+'</div></div></a></li>';
+			}
+			$('.xinyuan-list').append(str);
+
+	var currentPage = 0; // 默认首图的序列
+	var visible = 3;
+	var temporaryData = {
+	     prefixes: detectPrefixes(),
+        offsetY: '',
+        poswidth: 0,
+        posheight: 0,
+        lastPosWidth: '',
+        lastPosHeight: '',
+        lastZindex: '',
+        rotate: 0,
+        lastRotate: 0,
+        visible: visible || 3,
+        tracking: false,
+        animation: false,
+        currentPage: currentPage || 0,
+        opacity: 1,
+        lastOpacity: 0,
+        swipe: false,
+        zIndex: 10
+	  }
+
+	function touchstart(e) {
+		console.log(111)
+			if(temporaryData.tracking) {
+				return
+			}
+			// 是否为touch
+			if(e.type === 'touchstart') {
+				if(e.touches.length > 1) {
+					temporaryData.tracking = false
+					return
+				} else {
+					// 记录起始位置
+					this.basicdata.start.t = new Date().getTime()
+					this.basicdata.start.x = e.targetTouches[0].clientX
+					this.basicdata.start.y = e.targetTouches[0].clientY
+					this.basicdata.end.x = e.targetTouches[0].clientX
+					this.basicdata.end.y = e.targetTouches[0].clientY
+					// offsetY在touch事件中没有，只能自己计算
+					temporaryData.offsetY = e.targetTouches[0].pageY - this.$el.offsetParent.offsetTop
+				}
+				// pc操作
+			} else {
+				this.basicdata.start.t = new Date().getTime()
+				this.basicdata.start.x = e.clientX
+				this.basicdata.start.y = e.clientY
+				this.basicdata.end.x = e.clientX
+				this.basicdata.end.y = e.clientY
+				temporaryData.offsetY = e.offsetY
+			}
+			temporaryData.tracking = true
+			temporaryData.animation = false
+		}
+	
+		function touchmove(e) {
+			// 记录滑动位置
+			if(temporaryData.tracking && !temporaryData.animation) {
+				if(e.type === 'touchmove') {
+					e.preventDefault()
+					this.basicdata.end.x = e.targetTouches[0].clientX
+					this.basicdata.end.y = e.targetTouches[0].clientY
+				} else {
+					e.preventDefault()
+					this.basicdata.end.x = e.clientX
+					this.basicdata.end.y = e.clientY
+				}
+				// 计算滑动值
+				temporaryData.poswidth = this.basicdata.end.x - this.basicdata.start.x
+				temporaryData.posheight = this.basicdata.end.y - this.basicdata.start.y
+				let rotateDirection = this.rotateDirection()
+				let angleRatio = this.angleRatio()
+				temporaryData.rotate = rotateDirection * this.offsetWidthRatio * 15 * angleRatio
+			}
+		}
+		
+		function touchend(e) {
+			temporaryData.tracking = false
+			temporaryData.animation = true
+			// 滑动结束，触发判断
+			// 判断划出面积是否大于0.4
+			var offsetR = offsetRatio();
+			console.log(offsetR)
+			if(this.offsetRatio >= 0.4) {
+				// 计算划出后最终位置
+				let ratio = Math.abs(temporaryData.posheight / temporaryData.poswidth)
+				temporaryData.poswidth = temporaryData.poswidth >= 0 ? temporaryData.poswidth + 200 : temporaryData.poswidth - 200
+				temporaryData.posheight = temporaryData.posheight >= 0 ? Math.abs(temporaryData.poswidth * ratio) : -Math.abs(temporaryData.poswidth * ratio)
+				temporaryData.opacity = 0
+				temporaryData.swipe = true
+				this.nextTick()
+				// 不满足条件则滑入
+			} else {
+				temporaryData.poswidth = 0
+				temporaryData.posheight = 0
+				temporaryData.swipe = false
+				temporaryData.rotate = 0
+			}
+		}
+		
+		function nextTick() {
+			// 记录最终滑动距离
+			temporaryData.lastPosWidth = temporaryData.poswidth
+			temporaryData.lastPosHeight = temporaryData.posheight
+			temporaryData.lastRotate = temporaryData.rotate
+			temporaryData.lastZindex = 20
+			// 循环currentPage
+			temporaryData.currentPage = temporaryData.currentPage === this.pages.length - 1 ? 0 : temporaryData.currentPage + 1
+			// currentPage切换，整体dom进行变化，把第一层滑动置最低
+			this.$nextTick(() => {
+				temporaryData.poswidth = 0
+				temporaryData.posheight = 0
+				temporaryData.opacity = 1
+				temporaryData.rotate = 0
+			})
+		}
+		
+		function onTransitionEnd(index) {
+			let lastPage = temporaryData.currentPage === 0 ? this.pages.length - 1 : temporaryData.currentPage - 1
+			// dom发生变化正在执行的动画滑动序列已经变为上一层
+			if(temporaryData.swipe && index === lastPage) {
+				temporaryData.animation = true
+				temporaryData.lastPosWidth = 0
+				temporaryData.lastPosHeight = 0
+				temporaryData.lastOpacity = 0
+				temporaryData.lastRotate = 0
+				temporaryData.swipe = false
+				temporaryData.lastZindex = -1
+			}
+		}
+		
+		function prev() {
+			temporaryData.tracking = false
+			temporaryData.animation = true
+			// 计算划出后最终位置
+			let width = this.$el.offsetWidth
+			temporaryData.poswidth = -width
+			temporaryData.posheight = 0
+			temporaryData.opacity = 0
+			temporaryData.rotate = '-3'
+			temporaryData.swipe = true
+			this.nextTick()
+		}
+		
+		function next() {
+			temporaryData.tracking = false
+			temporaryData.animation = true
+			// 计算划出后最终位置
+			let width = this.$el.offsetWidth
+			temporaryData.poswidth = width
+			temporaryData.posheight = 0
+			temporaryData.opacity = 0
+			temporaryData.rotate = '3'
+			temporaryData.swipe = true
+			this.nextTick()
+		}
+		
+		function rotateDirection() {
+			if(temporaryData.poswidth <= 0) {
+				return -1
+			} else {
+				return 1
+			}
+		}
+		
+		function angleRatio() {
+			let height = this.$el.offsetHeight
+			let offsetY = temporaryData.offsetY
+			let ratio = -1 * (2 * offsetY / height - 1)
+			return ratio || 0
+		}
+		
+		function inStack(index, currentPage) {
+			let stack = []
+			let visible = temporaryData.visible
+			let length = this.pages.length
+			for(let i = 0; i < visible; i++) {
+				if(currentPage + i < length) {
+					stack.push(currentPage + i)
+				} else {
+					stack.push(currentPage + i - length)
+				}
+			}
+			return stack.indexOf(index) >= 0
+		}
+		
+		// 非首页样式切换
+		function transform(index) {
+			let currentPage = temporaryData.currentPage
+			let length = pages.length
+			let lastPage = currentPage === 0 ? pages.length - 1 : currentPage - 1
+			let style = {}
+			let visible = temporaryData.visible
+			if(index === temporaryData.currentPage) {
+				return
+			}
+			if(this.inStack(index, currentPage)) {
+				let perIndex = index - currentPage > 0 ? index - currentPage : index - currentPage + length
+				style['opacity'] = '1'
+				style['transform'] = 'translate3D(0,0,' + -1 * 60 * (perIndex - this.offsetRatio) + 'px' + ')'
+				style['zIndex'] = visible - perIndex
+				if(!temporaryData.tracking) {
+					style[temporaryData.prefixes.transition + 'TimingFunction'] = 'ease'
+					style[temporaryData.prefixes.transition + 'Duration'] = 300 + 'ms'
+				}
+			} else if(index === lastPage) {
+				style['transform'] = 'translate3D(' + temporaryData.lastPosWidth + 'px' + ',' + temporaryData.lastPosHeight + 'px' + ',0px) ' + 'rotate(' + temporaryData.lastRotate + 'deg)'
+				style['opacity'] = temporaryData.lastOpacity
+				style['zIndex'] = temporaryData.lastZindex
+				style[temporaryData.prefixes.transition + 'TimingFunction'] = 'ease'
+				style[temporaryData.prefixes.transition + 'Duration'] = 300 + 'ms'
+			} else {
+				style['zIndex'] = '-1'
+				style['transform'] = 'translate3D(0,0,' + -1 * visible * 60 + 'px' + ')'
+			}
+			console.log(style)
+			return style
+		}
+		
+		// 首页样式切换
+		function transformIndex(index) {
+			if(index === temporaryData.currentPage) {
+				let style = {}
+				style['transform'] = 'translate3D(' + temporaryData.poswidth + 'px' + ',' + temporaryData.posheight + 'px' + ',0px) ' + 'rotate(' + temporaryData.rotate + 'deg)'
+				style['opacity'] = temporaryData.opacity
+				style['zIndex'] = 10
+				if(temporaryData.animation) {
+					style[temporaryData.prefixes.transition + 'TimingFunction'] = 'ease'
+					style[temporaryData.prefixes.transition + 'Duration'] = (temporaryData.animation ? 300 : 0) + 'ms'}
+return style
+}
+}
+console.log($('li'))
+// 划出面积比例
+function offsetRatio() {
+	let width = $('li').offsetWidth
+	let height = $('li').offsetHeight
+	let offsetWidth = width - Math.abs(temporaryData.poswidth)
+	let offsetHeight = height - Math.abs(temporaryData.posheight)
+	let ratio = 1 - (offsetWidth * offsetHeight) / (width * height) || 0
+	console.log(ratio)
+	return ratio > 1 ? 1 : ratio
+}
+// 划出宽度比例
+function offsetWidthRatio() {
+	let width = $('li').offsetWidth
+	let offsetWidth = width - Math.abs(temporaryData.poswidth)
+	let ratio = 1 - offsetWidth / width || 0
+	console.log(ratio)
+	return ratio
+}
+
+function detectPrefixes() {
+	let transform
+	let transition
+	let transitionEnd
+	let hasTranslate3d
+	(function() {
+				let el = document.createElement('_')
+		let style = el.style
+		let prop
+		if(style[prop = 'webkitTransition'] === '') {
+			transitionEnd = 'webkitTransitionEnd'
+			transition = prop
+		}
+		if(style[prop = 'transition'] === '') {
+			transitionEnd = 'transitionend'
+			transition = prop
+		}
+		if(style[prop = 'webkitTransform'] === '') {
+			transform = prop
+		}
+		if(style[prop = 'msTransform'] === '') {
+			transform = prop
+		}
+		if(style[prop = 'transform'] === '') {
+			transform = prop
+		}
+		document.body.insertBefore(el, null)
+		style[transform] = 'translate3d(0, 0, 0)'
+		hasTranslate3d = !!window.getComputedStyle(el).getPropertyValue(transform)
+		document.body.removeChild(el)
+	}())
+	return {
+		transform,
+		transition,
+		transitionEnd,
+		hasTranslate3d
+	}
+}
 		</script>
 	</body>
 </html>

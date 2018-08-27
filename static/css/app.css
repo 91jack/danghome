@@ -7,7 +7,7 @@ ol, ul,li { list-style: none; }
 input, select, button, h1, h2, h3, h4, h5, h6 { font-size: 100%; font-family: inherit; }
 table { border-collapse: collapse; border-spacing: 0; }
 a { text-decoration: none; color: #000; }
-body { margin: 0 auto; height: 100%; font-size: 1rem; font-family: PingFang-SC-Regular, -apple-system,Helvetica,sans-serif; line-height: 1.5; color: #000; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
+body {position: relative; margin: 0 auto; height: 100%; font-size: 1rem; font-family: PingFang-SC-Regular, -apple-system,Helvetica,sans-serif; line-height: 1.5; color: #000; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
 input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 h1,h2,h3 {font-weight: normal;}
 
@@ -64,31 +64,34 @@ h1,h2,h3 {font-weight: normal;}
 	color: #999;
 }
 .dialog {
-	width:8.25rem;
+		width:8.25rem;
 	height:8.25rem;
-	
-	border-radius:16px;
-	position:absolute;
+	background:rgba(0,0,0,0.6);
+	border-radius:0.8rem;
+	position:fixed;
 	top:50%;
 	left:50%;
 	margin-top:-4.125rem;
 	margin-left: -4.125rem;
+	z-index: 10;
 	text-align: center;
-	background:rgba(0,0,0,1);
-	opacity:0.6;
+	overflow: hidden;
 	display: none;
+}
+.dialog-inner {
+
 }
 .dialog-fail img {
 	width:2.25rem;
 	height:2.25rem;
-	
-	margin-top: 2.25rem;
+	padding-top: 2.25rem;
+	overflow: hidden;
 }
 .dialog-success img {
 	width:3rem;
 	height:2.25rem;
-	
-	margin-top: 2.25rem;
+	padding-top: 2.25rem;
+	overflow: hidden;
 }
 
 .dialog span {
@@ -96,6 +99,7 @@ h1,h2,h3 {font-weight: normal;}
 	font-size: 1.166666rem;
 	color: #fff;
 	line-height: 2rem;
+	overflow: hidden;
 }
 
 img {
@@ -189,8 +193,9 @@ img {
 }
 .top-search input {
 	width:98%;
-	height:2.708333rem;
-	line-height:2.708333rem;
+	height:1.708333rem;
+	line-height:1.708333rem;
+	padding: 0.5rem 0;
 	background: #EDF1FC;
 	border:none;
 	text-indent: 3rem;
@@ -466,6 +471,7 @@ img {
 	line-height: 4.333333rem;
 	border-top:0.041666rem solid #e1e4f0;
 	border-bottom:0.041666rem solid #e1e4f0;
+	
 }
 .feedback-header img {
 	width:2.333333rem;
@@ -485,7 +491,7 @@ img {
 	float:right;
 }
 .feedback-list {
-	
+	margin-bottom: 4.166666rem;
 	
 }
 .feedback-list-item {
@@ -555,16 +561,8 @@ img {
 
 .lianjian-item-list .news-list-item {
 	margin-right: 1rem;
-	height:4.375rem;
-	padding: 0.666666rem 0;
 }
-.lianjian-item-list .news-list-item .list-item-titlea{
-	height:4.5rem;
-}
-.lianjian-item-list .news-list-item .news-img {
-	width:5.833333rem;
-	height:4.375rem;
-}
+
 .lianjian-item-bottom {
 	height:3.125rem;
 	
@@ -792,6 +790,7 @@ img {
 	float:left;
 	margin-right:1rem;
 	position:relative;
+	
 }
 .upload-imgwrap span {
 	display: block;
@@ -809,13 +808,14 @@ img {
 	height:100%;
 }
 .icon-imgadd {
+	height:4.583333rem;
 	position: relative;
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 
 .icon-imgadd img{
 	width:4.583333rem;
-	height:4.583333rem;
+	height:100%;
 }
 #file {
 	display: block;
@@ -837,6 +837,7 @@ img {
 	height:3.75rem;
 	overflow: hidden;
 	padding: 2.541666rem 0;
+	position: relative;
 }
 .submit-btn a{
 	display: block;
