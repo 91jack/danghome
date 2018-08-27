@@ -21,7 +21,7 @@
 						<img src="static/images/icon/icon_dangfei.png" class="icon" />
 					</div>
 					<p>党费缴纳</p>
-					
+					<em></em>
 					<img src="static/images/icon/icon_del.png" alt="" class="icon-del" data-appid="1"/>
 				</div>-->
 				
@@ -69,7 +69,7 @@
 						+'<div class="icon-img">'
 						+'<img src="'+ myapp[i].icon+'" class="icon" /></div>'
 							+'<p>'+myapp[i].text+'</p>'
-							+'<img src="static/images/icon/icon_del.png" alt="" class="icon-del" /></div>'
+							+'<em></em></div>'
 			}
 			$('.myapp').append(myappStr);
 				
@@ -89,7 +89,7 @@
 						+'<div class="icon-img">'
 						+'<img src="'+ otherapp[i].icon+'" class="icon" /></div>'
 							+'<p>'+otherapp[i].text+'</p>'
-							+'<img src="static/images/icon/icon_add.png" alt="" class="icon-add" /></div>'
+							+'<em></em></div>'
 			}
 			$('.otherapp').append(otherappStr);	
 			
@@ -98,13 +98,15 @@
 			$('.edit').click(function(){
 				if(on){
 					$(this).text('完成');
-					$('.icon-del').css('display','block');
-					$('.icon-add').css('display','block');
+					$('.app-item em').css('display','block');
 					$('.app-item a').css('display','none');
 					
 					// 删除事件
 					$('.myapp .app-item').bind('click',function(){
 						var appid = $(this).attr('data-appid');
+//						var obj = $(this).clone(true);
+//						$('.otherapp').append(obj);
+//						$(this).remove();
 						console.log(appid)
 						// 后台
 					});
@@ -112,14 +114,17 @@
 					// 添加事件
 					$('.otherapp .app-item').bind('click',function(){
 						var appid = $(this).attr('data-appid');
+//						var obj = $(this).clone(true);
+//						$('.myapp').append(obj);
+//						$(this).remove();
 						console.log(appid)
 						// 后台
 					});
 					
 				}else{
 					$(this).text('编辑');
-					$('.icon-del').css('display','none');
-					$('.icon-add').css('display','none');
+					$('.app-item em').css('display','none');
+					
 					$('.app-item a').css('display','block')
 					
 				}

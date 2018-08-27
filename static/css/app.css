@@ -1018,14 +1018,22 @@ img {
 	color:#1A1A1A;
 	
 }
-.app-list .app-item .icon-del,
-.app-list .app-item .icon-add  {
+.app-list .app-item em  {
+	display: block;
 	width:1.166666rem;
 	height:1.166666rem;
 	position: absolute;
 	top:0.5rem;
 	right:0.5rem;
 	display: none;
+}
+.myapp em {
+	background:url(../images/icon/icon_del.png) no-repeat;
+	background-size:100%;
+}
+.otherapp em {
+	background:url(../images/icon/icon_add.png) no-repeat;
+	background-size:100%;
 }
 
 .details-title {
