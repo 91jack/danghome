@@ -41,18 +41,18 @@
 
 			<div class="filter-condition">
 
-				<ul class="filter-condition-item">
+				<ul class="filter-condition-item" id="years">
 					<li data-value="0" data-type="年份" class="active">全部</li>
-					<li data-value="1">2018年</li>
+					<!--<li data-value="1">2018年</li>
 					<li data-value="2">2017年</li>
 					<li data-value="3">2016年</li>
 					<li data-value="4">2015年</li>
-					<li data-value="5">2014年</li>
+					<li data-value="5">2014年</li>-->
 				</ul>
 
-				<ul class="filter-condition-item">
+				<ul class="filter-condition-item" id="months">
 					<li data-value="0" data-type="月份" class="active">全部</li>
-					<li data-value="1">1月</li>
+					<!--<li data-value="1">1月</li>
 					<li data-value="2">2月</li>
 					<li data-value="3">3月</li>
 					<li data-value="4">4月</li>
@@ -63,7 +63,7 @@
 					<li data-value="9">9月</li>
 					<li data-value="10">10月</li>
 					<li data-value="11">11月</li>
-					<li data-value="12">12月</li>
+					<li data-value="12">12月</li>-->
 				</ul>
 
 				<ul class="filter-condition-item">
@@ -120,6 +120,24 @@
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
 			// 筛选条件
+			// 最近五年
+			var year = new Date().getFullYear();
+			var yearsStr = '';
+			for(var i=1;i<=5;i++){
+				yearsStr += '<li data-value="'+i+'">'+year+'年</li>'
+				year--;
+			}
+			$('#years').append(yearsStr);
+			
+			// 月份
+			var monthsStr = '';
+			for(var i=1;i<=12;i++){
+				monthsStr += '<li data-value="'+i+'">'+i+'月</li>'
+			}
+			$('#months').append(monthsStr);
+			
+			
+			
 			var index = 0;
 			$('.filter-btn li').each(function() {
 				var on = true;
@@ -132,12 +150,10 @@
 					that.parents().siblings().children('em').children('img').attr('src','static/images/icon/icon_down.png');
 					
 					if(on) {
-						//$(this).children().children('img').attr('src','static/images/icon/icon_up.png');
 						$('.mask').show();
 						$('.filter-condition').slideDown('fast');
 						$('.filter-condition-item').eq(index).slideDown('fast').siblings().slideUp('fast');
 					} else {
-						//$(this).children().children('img').attr('src','static/images/icon/icon_down.png');
 						$('.mask').hide();
 						$('.filter-condition').slideUp('fast');
 					}

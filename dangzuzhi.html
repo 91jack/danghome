@@ -96,13 +96,20 @@
 					</div>
 				</div>
 			</div>
-			
 		</div>
 		
+		<!--搜索无结果-->
+		<div class="empty">
+			<div class="empty-content">
+				<img src="static/images/icon/empty.png"/>
+				<p>暂无数据</p>
+			</div>
+		</div>
 		
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
+			// 列表收缩折叠
 			var on = true;
 			$('.zuzhi-list-item .icon-zuzhi').click(function(){
 				var hasChildren = $(this).parent().siblings();
@@ -120,6 +127,28 @@
 					window.location.href = 'dangzuzhi2.html'
 				}
 			})
+			
+			
+			// 搜索按钮
+			$('.search-btn').click(function(){
+				var key = $('.search-wrap input').val();
+				if(key ==''){
+					$('.empty').hide();
+				}else{
+					//搜索无结果
+					$('.empty').show();
+					// 后端
+				}
+				
+			})
+			
+			// 监听input的值
+			$(".search-wrap input").bind('input porpertychange',function(){
+				var key = $('.search-wrap input').val();
+				if(key ==''){
+					$('.empty').hide();
+				}
+			});
 		</script>
 	</body>
 </html>

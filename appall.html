@@ -22,7 +22,6 @@
 					</div>
 					<p>党费缴纳</p>
 					<em></em>
-					<img src="static/images/icon/icon_del.png" alt="" class="icon-del" data-appid="1"/>
 				</div>-->
 				
 			</div>
@@ -40,7 +39,7 @@
 						<img src="static/images/icon/icon_dangfei.png" class="icon" />
 					</div>
 					<p>党员转接</p>
-					<img src="static/images/icon/icon_add.png" alt="" class="icon-add" />
+					<em></em>
 				</div>-->
 			
 			</div>
@@ -104,9 +103,6 @@
 					// 删除事件
 					$('.myapp .app-item').bind('click',function(){
 						var appid = $(this).attr('data-appid');
-//						var obj = $(this).clone(true);
-//						$('.otherapp').append(obj);
-//						$(this).remove();
 						console.log(appid)
 						// 后台
 					});
@@ -114,9 +110,6 @@
 					// 添加事件
 					$('.otherapp .app-item').bind('click',function(){
 						var appid = $(this).attr('data-appid');
-//						var obj = $(this).clone(true);
-//						$('.myapp').append(obj);
-//						$(this).remove();
 						console.log(appid)
 						// 后台
 					});

@@ -93,17 +93,17 @@
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/slider.js"></script>
-<script type="text/javascript">
-		// 轮播调用
-	$('.top-slider-imgbox').each(function(){
-		var imgbox = $(this)[0];
-		var li = $(this).children('li');
-		
-		var currentNum = $('.current-num');
-		var allNum = $('.all-num');
-		console.log(currentNum,allNum)
-		slider( imgbox, li,currentNum,allNum)
-	})
-</script>
+		<script type="text/javascript">
+				// 轮播调用
+			$('.top-slider-imgbox').each(function(){
+				var imgbox = $(this)[0];
+				var li = $(this).children('li');
+				
+				var currentNum = $('.current-num');
+				var allNum = $('.all-num');
+				console.log(currentNum,allNum)
+				slider( imgbox, li,currentNum,allNum)
+			})
+		</script>
 	</body>
 </html>
