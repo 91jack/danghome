@@ -67,7 +67,11 @@
 					+'</div></div></a></li>';
 			}
 			$('.xinyuan-list').append(str);
-			
+			$('.xinyuan-list li').each(function(){
+				var index = $(this).index();
+				console.log(index*0.1)
+				//$(this).css({'transform':'scale('+0.1*index+')})
+			})
 		</script>
 	</body>
 </html>
