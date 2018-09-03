@@ -6,13 +6,15 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>微心愿</title>
 		<link rel="stylesheet" type="text/css" href="static/css/app.css" />
+		<link rel="stylesheet" type="text/css" href="static/css/component.css" />
 		<link rel="stylesheet" type="text/css" href="static/css/xinyuan.css" />
+		<script src="static/js/modernizr.custom.js"></script>
 	</head>
 	<body>
 		<div class="xinyuan">
 			<div class="xinyuan-container">
 				<div class="xinyuan-wrap">
-					<ul class="xinyuan-list">
+					<ul class="xinyuan-list elasticstack"  id="elasticstack">
 						<!--<li class="xinyuan-item">
 							<a href="xinyuandetails.html">
 								<img src="static/images/icon/xinyuan.png" alt="" />
@@ -41,6 +43,8 @@
 
 		<script src="static/js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="static/js/app.js" type="text/javascript" charset="utf-8"></script>
+		<script src="static/js/draggabilly.pkgd.min.js"></script>
+		<script src="static/js/elastiStack.js"></script>
 		<script type="text/javascript">
 			var pages = [
 				{'id':1,'status':'爱心<br/>筹备中','imgpath':'http://img4.imgtn.bdimg.com/it/u=3093784034,1899544230&fm=26&gp=0.jpg','intro':'我有一个大大的心愿'},
@@ -67,11 +71,10 @@
 					+'</div></div></a></li>';
 			}
 			$('.xinyuan-list').append(str);
-			$('.xinyuan-list li').each(function(){
-				var index = $(this).index();
-				console.log(index*0.1)
-				//$(this).css({'transform':'scale('+0.1*index+')})
-			})
+			
+		
+			new ElastiStack( document.getElementById( 'elasticstack' ) );
+			
 		</script>
 	</body>
 </html>
