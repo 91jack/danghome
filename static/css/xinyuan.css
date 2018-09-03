@@ -1,100 +1,98 @@
-/*html {
+/*通用样式*/
+* { -webkit-tap-highlight-color: transparent; outline: 0; margin: 0; padding: 0; vertical-align: baseline; }
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; vertical-align: baseline; }
+img { border: 0 none; vertical-align: top; }
+i, em { font-style: normal; }
+ol, ul, li { list-style: none; }
+input, select, button, h1, h2, h3, h4, h5, h6 { font-size: 100%; font-family: inherit; }
+table { border-collapse: collapse; border-spacing: 0; }
+a { text-decoration: none; color: #000; }
+body { position: relative; margin: 0 auto; height: 100%; font-size: 1rem; font-family: PingFang-SC-Regular, -apple-system, Helvetica, sans-serif; line-height: 1.5; color: #000; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important; }
+input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+h1, h2, h3 { font-weight: normal; }
+
+html {
 	height:100%;
+	background: rgb(14,127,171);
 }
 body {
 	margin: 0;
 	padding: 0;
+	width: 100%;
+    height: 100%;
 	background: url(../images/icon/xinyuan_bg.png) no-repeat;
 	background-size:100% 100%;
-	overflow-y: scroll;
-    width: 100%;
-    height: 100%;
     position: absolute;
-}*/
-.xinyuan {
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow: hidden;
+    
+}
+.container {
+	display: -webkit-flex;
 	display: flex;
-    display: -webkit-flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.content {
+	-webkit-align-self: stretch;
+	align-self: stretch;
+	overflow: hidden;
+	width:310px;
+	margin-top: 30px;
+	padding: 2em 2em 6em;
+	/*width: 50%;*/
+	position: relative;
+	top:0;
+	bottom:0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 }
 
-.xinyuan-container {
+.content:nth-child(even):last-child {
+	width: 100%;
+}
+
+.stack__item img {
+	width:310px;
+	height:240px;
+}
+.xinyuan-info {
+	height:110px;
+	padding:20px 12px;
+	background: #fff;
 	
 }
-.xinyuan-wrap {
-	margin: 0 auto;
-    position: relative;
-	z-index: 1000;
-    width:25.833333rem;
-    height: 31.875rem;
-    padding: 0;
-    list-style: none;
-}
-
-.xinyuan-item {
-	width:25.833333rem;
-	height:23.541666rem;
-	margin: 0 auto;
-	border-radius: 0.833333rem;
-}
-.xinyuan-item img {
-	width:25.833333rem;
-	height:20rem;
-}
-.xinyuan-item .xinyuan-info {
-	height:4.333333rem;
-	padding: 2rem 1rem;
-	background: #fff;
-}
 .xinyuan-status {
-	width:4.166666rem;
-	height:3.666666rem;
+	width:50px;
+	height:50px;
 	border-radius: 50%;
 	background: #F93556;
 	color: #fff;
-	font-size:1rem;
+	font-size:12px;
 	text-align: center;
 	float:left;
-	padding-top: 0.5rem;
-	
+}
+.xinyuan-status p {
+	padding-top: 6px;
 }
 .xinyuan-intro {
-	width:19.125rem;
-	height:4.375rem;
+	width:220px;
+	height:53px;
 	float:right;
-	font-size: 1rem;
-	line-height: 1.5rem;
+	font-size: 12px;
+	line-height: 18px;
+	text-align: left;
 }
-
-.xinyuan-control {
-	width:19.333333rem;
-	height:6.25rem;
-	display: -webkit-flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-	position: absolute;
-	bottom: 3.375rem;
-	left:50%;
-	margin-left: -9.666666rem;
-}
-.xinyuan-control a{
-	display: block;
-	width:6.25rem;
-	height:6.25rem;
-	text-align: center;
-	background: #fff;
-	border-radius: 50%;
-	float:left;
-	margin-right:6.833333rem;
-	z-index: 100;
-}
-.xinyuan-control a:last-child {
-	margin-right: 0;
-}
-.xinyuan-control a img {
-	width:1.916666rem;
-	height:1.916666rem;
-	margin-top: 2.166666rem;
-}
-

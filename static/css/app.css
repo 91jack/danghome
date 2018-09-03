@@ -858,8 +858,9 @@ img {
 .sixiang-huibao em {
 	display: inline-block;
 	color: #FF0017;
-	height: 5rem;
-	line-height: 5rem;
+	height: 2rem;
+	line-height: 2rem;
+	font-size:1rem;
 }
 
 .huibao-title {
@@ -879,14 +880,21 @@ img {
 .huibao-content {
 	border-bottom: 0.041666rem solid #e1e4f0;
 }
-
+.huibao-content p {
+	clear:both;
+	/*background: red;*/
+	padding: 0;
+	margin: 0;
+	height:2rem;
+	line-height: 2rem;
+}
 .huibao-content textarea {
 	width: 100%;
 	min-height: 11.666666rem;
-	padding: 1rem 0;
+	/*padding: 1rem 0;*/
 	line-height: 1.5rem;
 	border: none;
-	margin-top: -2rem;
+	/*margin-top: -0.5rem;*/
 	font-size: 1.166666rem;
 }
 
