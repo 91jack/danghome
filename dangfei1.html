@@ -81,7 +81,17 @@
 		</div>
 
 		<div class="dangfei-list" style="margin-top:3.333333rem;">
-			<div class="dangfei-list-item" data-selected="false">
+			<div class="dangfei-list-item over" data-selected="false">
+				<p>
+					<span class="fl">2018年1月党费缴纳</span>
+					<span class="fr c333">已缴纳（线上）</span>
+				</p>
+				<p>
+					<span class="fl cff0"><em>￥</em>78</span>
+					<span class="fr c999">2018-07-21截至</span>
+				</p>
+			</div>
+			<div class="dangfei-list-item on" data-selected="false">
 				<p>
 					<span class="fl">2018年1月党费缴纳</span>
 					<span class="fr cff0">未缴纳</span>
@@ -91,7 +101,7 @@
 					<span class="fr c999">2018-07-21截至</span>
 				</p>
 			</div>
-			<div class="dangfei-list-item" data-selected="false">
+			<div class="dangfei-list-item on" data-selected="false">
 				<p>
 					<span class="fl">2018年1月党费缴纳</span>
 					<span class="fr cff0">未缴纳</span>
@@ -187,11 +197,11 @@
 			$('.icon-all').on('click', function() {
 				if(on2) {
 					$(this).children('img').attr('src', 'static/images/icon/icon_all2.png');
-					$('.dangfei-list-item').addClass('active').attr('data-selected', true);
+					$('.on').addClass('active').attr('data-selected', true);
 
 				} else {
 					$(this).children('img').attr('src', 'static/images/icon/icon_all1.png');
-					$('.dangfei-list-item').removeClass('active').attr('data-selected', false);
+					$('.on').removeClass('active').attr('data-selected', false);
 
 				}
 				on2 = !on2;
@@ -199,7 +209,7 @@
 
 			// 单选
 			var selected = []
-			$('.dangfei-list-item').each(function() {
+			$('.on').each(function() {
 				var on = true;
 				$(this).click(function() {
 					if(on) {
@@ -218,7 +228,7 @@
 						selected.shift($(this));
 					};
 					console.log(selected)
-					if($('.dangfei-list-item').length == selected.length) {
+					if($('.on').length == selected.length) {
 						$('.icon-all').children('img').attr('src', 'static/images/icon/icon_all2.png');
 					} else {
 						$('.icon-all').children('img').attr('src', 'static/images/icon/icon_all1.png');

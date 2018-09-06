@@ -493,6 +493,7 @@ img {
 	line-height: 2rem;
 	font-size: 1.166666rem;
 	color: #666;
+	overflow: hidden;
 }
 
 .section-bottom {
@@ -1369,6 +1370,7 @@ img {
 
 .dangfei-list {
 	width: 100%;
+	margin-bottom: 5rem;
 }
 
 .dangfei-list-item {
