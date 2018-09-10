@@ -1755,11 +1755,16 @@ img {
 }
 
 .level1 .fr .name {
+	clear:both;
 	display: inline-block;
-	width: 14rem;
-	line-height: 3.333333rem;
+	width: 15rem;
+	height: 5rem;
+	line-height: 5rem;
 	font-size: 1.25rem;
 	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 
@@ -1853,11 +1858,15 @@ img {
 }
 
 .zuzhi-list-item .fr .name {
+	clear:both;
 	display: inline-block;
-	width: 12.5rem;
-	line-height: 3.333333rem;
+	width: 15rem;
+	line-height: 5rem;
 	font-size: 1.25rem;
 	color: #333;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 
