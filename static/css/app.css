@@ -1720,6 +1720,108 @@ img {
 	display: none;
 }
 
+/*党组织*/
+.level1 {
+	background: #fff;
+	height: 5rem;
+	padding-left: 1rem;
+	clear: both;
+}
+
+.level1  .fl {
+	width: 3.333333rem;
+	height: 3.333333rem;
+	margin-top: 0.833333rem;
+}
+
+.level1  .icon-zuzhi2 {
+	width: 0.916666rem;
+	height: 0.916666rem;
+	margin-top: 2.041666rem;
+	margin-left: 1.208333rem;
+}
+.level1 .icon-zuzhi3 {
+	width: 0.916666rem;
+	height: 0.916666rem;
+	margin-top: 2rem;
+	margin-right: 1.208333rem;
+}
+
+.level1 .fr {
+	width: 25.916666rem;
+	height: 5rem;
+	line-height: 5rem;
+	border-bottom: 0.041666rem solid #e1e4f0;
+}
+
+.level1 .fr .name {
+	display: inline-block;
+	width: 14rem;
+	line-height: 3.333333rem;
+	font-size: 1.25rem;
+	color: #333;
+}
+
+
+.level2-wrap {
+	clear: both;
+	display: none;
+}
+.level2 {
+	clear: both;
+}
+.level3-wrap {
+	clear: both;
+	display: none;
+}
+.level3 {
+	clear: both;
+}
+
+
+.icon-xia {
+	display: inline-block;
+	width:0.875rem;
+	height:0.416666rem;
+	background: url(../images/icon/icon_xia.png) no-repeat;
+	background-size: 100%;
+	float:right;
+	margin-top: 2.291666rem;
+	margin-right: 1rem;
+}
+.icon-shang {
+	display: inline-block;
+	width:0.875rem;
+	height:0.416666rem;
+	background: url(../images/icon/icon_shang.png) no-repeat;
+	background-size: 100%;
+	float:right;
+	margin-top: 2.291666rem;
+	margin-right: 1rem;
+}
+
+
+.icon-phone {
+	background: url(../images/icon/icon_phone.png);
+	margin-right: 1.583333rem;
+}
+
+.icon-goon {
+	background: url(../images/icon/icon_goon.png);
+	margin-right: 1rem;
+}
+
+.icon-phone,
+.icon-goon {
+	display: inline-block;
+	width: 2.083333rem;
+	height: 2.083333rem;
+	background-size: 100%;
+	margin-top: 1.458333rem;
+	float: right;
+}
+
+
 .zuzhi-list {
 	background: #fff;
 }
@@ -1727,6 +1829,7 @@ img {
 .zuzhi-list-item {
 	height: 5rem;
 	padding-left: 1rem;
+	position: relative;
 }
 
 .zuzhi-list-item .fl {
@@ -1757,30 +1860,10 @@ img {
 	color: #333;
 }
 
-.zuzhi-item .children {
-	display: none;
-}
 
-.icon-phone {
-	background: url(../images/icon/icon_phone.png);
-	margin-right: 1.583333rem;
-}
 
-.icon-goon {
-	background: url(../images/icon/icon_goon.png);
-	margin-right: 1rem;
-}
 
-.icon-phone,
-.icon-goon {
-	display: inline-block;
-	width: 2.083333rem;
-	height: 2.083333rem;
-	background-size: 100%;
-	margin-top: 1.458333rem;
-	float: right;
-}
-
+/*岗位认领*/
 .renling-tabbar {
 	height: 2.166666rem;
 	padding: 1rem 0;
